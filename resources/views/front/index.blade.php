@@ -1,0 +1,288 @@
+
+@extends('front.layouts.master')
+
+@section('title') Home @endsection
+
+@section('content')
+    @if($sliders->isNotEmpty())
+    <section class="swiper-slider-hero position-relative d-block vh-100" id="home">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                @foreach($sliders as $slider)
+                <div class="swiper-slide d-flex align-items-center overflow-hidden">
+                    <div class="slide-inner slide-bg-image d-flex align-items-center" style="background: center center;" data-background="{{$slider->getImage()}}">
+                        <div class="bg-overlay"></div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="title-heading text-center">
+                                        <h1 class="display-5 text-white title-dark fw-bold mb-4">{{$slider->title}}</h1>
+                                        <p class="para-desc mx-auto text-white-50">{{$slider->description}}</p>
+                                        
+                                        <div class="mt-4 pt-2">
+                                            <a href="{{route('contact')}}" class="btn btn-primary">Contact us</a>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end container-->
+                    </div><!-- end slide-inner --> 
+                </div> <!-- end swiper-slide -->
+                @endforeach
+            </div>
+            <!-- end swiper-wrapper -->
+
+            <!-- swipper controls -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-next rounded-circle text-center"></div>
+            <div class="swiper-button-prev rounded-circle text-center"></div>
+        </div><!--end container-->
+    </section><!--end section-->
+    @endif
+
+    <!-- FEATURES START -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="features-absolute">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-airplay rounded h3 mb-0 mx-auto"></i>
+                                    </div>
+        
+                                    <div class="card-body p-0 content">
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Best Financial Advice</a></h5>
+                                        <p class="text-muted">The most well-known which is said to have originated</p>
+        
+                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            
+                            <div class="col-lg-4 col-md-4 col-12 mt-4 mt-md-0 pt-2 pt-md-0">
+                                <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-clipboard-alt rounded h3 mb-0 mx-auto"></i>
+                                    </div>
+        
+                                    <div class="card-body p-0 content">
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Authorised Finance Brand</a></h5>
+                                        <p class="text-muted">The most well-known which is said to have originated</p>
+        
+                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            
+                            <div class="col-lg-4 col-md-4 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                                <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-credit-card-search rounded h3 mb-0 mx-auto"></i>
+                                    </div>
+        
+                                    <div class="card-body p-0 content">
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Compehensive Advices</a></h5>
+                                        <p class="text-muted">The most well-known which is said to have originated</p>
+        
+                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                            <div class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md">
+                                <div class="card-body p-0">
+                                    <img src="{{URL::asset('front/assets')}}/images/course/online/ab01.jpg" class="img-fluid" alt="work-image">
+                                    <div class="overlay-work"></div>
+                                    <div class="content">
+                                        <a href="javascript:void(0)" class="title text-white d-block fw-bold">Web Development</a>
+                                        <small class="text-white-50">IT & Software</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+
+                        <div class="col-lg-6 col-6">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                                    <div class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md">
+                                        <div class="card-body p-0">
+                                            <img src="{{URL::asset('front/assets')}}/images/course/online/ab02.jpg" class="img-fluid" alt="work-image">
+                                            <div class="overlay-work"></div>
+                                            <div class="content">
+                                                <a href="javascript:void(0)" class="title text-white d-block fw-bold">Michanical Engineer</a>
+                                                <small class="text-white-50">Engineering</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                                    <div class="card work-container work-primary work-modern overflow-hidden rounded border-0 shadow-md">
+                                        <div class="card-body p-0">
+                                            <img src="{{URL::asset('front/assets')}}/images/course/online/ab03.jpg" class="img-fluid" alt="work-image">
+                                            <div class="overlay-work"></div>
+                                            <div class="content">
+                                                <a href="javascript:void(0)" class="title text-white d-block fw-bold">Chartered Accountant</a>
+                                                <small class="text-white-50">C.A.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <div class="ms-lg-4">
+                        <div class="section-title">
+                            <span class="badge bg-soft-primary rounded-pill fw-bold">About us</span>
+                            <h4 class="title mb-4 mt-3">We design and develop <br> world-class web applications.</h4>
+                            <p class="text-muted para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect. The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century.</p>
+                        </div>
+
+                        <div class="mt-4 pt-2">
+                            <a href="https://1.envato.market/landrick" target="_blank" class="btn btn-primary m-1">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+
+    @if($services->isNotEmpty())
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="section-title mb-4 pb-2">
+                        <h4 class="title mb-4">Key Features</h4>
+                        <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="row align-items-center">
+                @foreach($services as $service)
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 features feature-primary feature-clean course-feature p-4 overflow-hidden shadow">
+                        <div class="icons text-start">
+                            <i class="uil uil-airplay rounded h3 mb-0"></i>
+                        </div>
+                        <div class="card-body p-0 mt-4">                                            
+                            <a href="javascript:void(0)" class="title h5 text-dark">{{$service->title}}</a>
+                            <p class="text-muted mt-2">{{$service->short_description}}</p>
+                            <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b"></i></a>
+                            <i class="uil uil-airplay full-img"></i>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                @endforeach
+                
+                <div class="col-12 mt-4 pt-2 text-center">
+                    <a href="{{route('services')}}" class="btn btn-primary">See More <i class="mdi mdi-arrow-right"></i></a>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    @endif
+
+    <!-- Start -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="video-solution-cta position-relative" style="z-index: 1;">
+                        <div class="position-relative">
+                            <img src="{{URL::asset('front/assets')}}/images/cta-bg.jpg" class="img-fluid rounded-md shadow-lg" alt="">
+                            <div class="play-icon">
+                                <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="play-btn lightbox border-0">
+                                    <i class="mdi mdi-play text-primary rounded-circle shadow-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content mt-md-4 pt-md-2">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-center">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 mt-4 pt-2">
+                                            <div class="section-title text-md-start">
+                                                <h6 class="text-white-50">Team</h6>
+                                                <h4 class="title text-white title-dark mb-0">Meet Experience <br> Team Member</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-12 mt-4 pt-md-2">
+                                            <div class="section-title text-md-start">
+                                                <p class="text-white-50 para-desc">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                                                <a href="javascript:void(0)" class="text-white title-dark">Read More <i data-feather="arrow-right" class="fea icon-sm"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row -->
+            <div class="feature-posts-placeholder bg-primary bg-gradient"></div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+
+    @if($blogs->isNotEmpty())
+    <section class="section">
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center mb-4 pb-2">
+                <div class="col-lg-6">
+                    <div class="section-title text-center text-lg-start">
+                        <h6 class="text-primary">Blog</h6>
+                        <h4 class="title mb-4 mb-lg-0">Reads Our Latest <br> News & Blog</h4>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-6">
+                    <div class="section-title text-center text-lg-start">
+                        <p class="text-muted mb-0 mx-auto para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="row">
+                @foreach($blogs as $blog)
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="card blog blog-primary rounded border-0 shadow">
+                        <div class="position-relative">
+                            <img src="{{$blog->getImage()}}" class="card-img-top rounded-top" alt="{{$blog->title}}">
+                            <div class="overlay rounded-top"></div>
+                        </div>
+                        <div class="card-body content">
+                            <h5><a href="{{route('blog.details', $blog->slug)}}" class="card-title title text-dark">{{$blog->title}}</a></h5>
+                            <div class="post-meta d-flex justify-content-between mt-3">
+                                <a href="{{route('blog.details', $blog->slug)}}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            </div>
+                        </div>
+                        <div class="author">
+                            <small class="date"><i class="uil uil-calendar-alt"></i> {{$blog->created_at->format('d M Y')}}</small>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                @endforeach
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    @endif
+@endsection
