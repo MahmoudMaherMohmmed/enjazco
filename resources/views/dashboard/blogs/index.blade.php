@@ -17,7 +17,7 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">{{ __('blogs.plural') }}</h4>
+                <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('blogs.plural') }}</span>
             </div>
         </div>
@@ -55,7 +55,7 @@
                                             <span class="badge {{$blog->status->color()}}">{{$blog->status->trans()}}</span>
                                         </td>
                                         <td>{{$blog->created_at->diffForHumans()}}</td>
-                                        <td> 
+                                        <td>
                                             @include('dashboard.blogs.partials.actions.show')
                                             @include('dashboard.blogs.partials.actions.edit')
                                             @include('dashboard.blogs.partials.actions.delete')

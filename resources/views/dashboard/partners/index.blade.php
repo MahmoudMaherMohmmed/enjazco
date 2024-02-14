@@ -17,7 +17,7 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">{{ __('partners.plural') }}</h4>
+                <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('partners.plural') }}</span>
             </div>
         </div>
@@ -57,7 +57,7 @@
                                             <span class="badge {{$partner->status->color()}}">{{$partner->status->trans()}}</span>
                                         </td>
                                         <td>{{$partner->created_at->diffForHumans()}}</td>
-                                        <td> 
+                                        <td>
                                             @include('dashboard.partners.partials.actions.show')
                                             @include('dashboard.partners.partials.actions.edit')
                                             @include('dashboard.partners.partials.actions.delete')
