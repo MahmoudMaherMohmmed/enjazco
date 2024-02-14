@@ -21,9 +21,11 @@
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('settings.plural') }}</span>
             </div>
         </div>
-        {{--<div class="d-flex my-xl-auto right-content">
-            @include('dashboard.settings.partials.actions.create')
-        </div>--}}
+        @if($settings->count() < 1)
+            <div class="d-flex my-xl-auto right-content">
+                @include('dashboard.settings.partials.actions.create')
+            </div>
+        @endif
     </div>
     <!-- breadcrumb -->
 @endsection
@@ -40,8 +42,6 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.attributes.whatsapp_number') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.attributes.calling_number') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.created_at') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.actions.actions') }}</th>
                                 </tr>
@@ -50,17 +50,15 @@
                                 @foreach($settings as $setting)
                                     <tr>
                                         <td>{{$setting->getTranslation('title', app()->getLocale())}}</td>
-                                        <td>{{$setting->calling_number}}</td>
-                                        <td>{{$setting->whatsapp_number}}</td>
                                         <td>{{$setting->created_at->diffForHumans()}}</td>
-                                        <td> 
+                                        <td>
                                             @include('dashboard.settings.partials.actions.show')
                                             @include('dashboard.settings.partials.actions.edit')
-                                            {{--@include('dashboard.settings.partials.actions.delete')--}}
+                                            @include('dashboard.settings.partials.actions.delete')
                                         </td>
                                     </tr>
 
-                                    {{--@include('dashboard.settings.partials.models.delete')--}}
+                                    @include('dashboard.settings.partials.models.delete')
                                 @endforeach
                             </tbody>
                         </table>

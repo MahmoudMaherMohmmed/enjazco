@@ -36,26 +36,34 @@
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.description') }}</th>
                                     <td>{{$setting->getTranslation('description', app()->getLocale())}}</td>
-                                </tr>   
-                                <tr>
-                                    <th scope="row">{{ __('settings.attributes.whatsapp_number') }}</th>
-                                    <td>{{$setting->whatsapp_number}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('settings.attributes.calling_number') }}</th>
-                                    <td>{{$setting->calling_number}}</td>
+                                    <th scope="row">{{ __('settings.attributes.facebook_url') }}</th>
+                                    <td>{{$setting->facebook_url}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('settings.attributes.info_email') }}</th>
-                                    <td>{{$setting->info_email}}</td>
+                                    <th scope="row">{{ __('settings.attributes.whatsapp_url') }}</th>
+                                    <td>{{$setting->whatsapp_url}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('settings.attributes.support_email') }}</th>
-                                    <td>{{$setting->support_email}}</td>
+                                    <th scope="row">{{ __('settings.attributes.telegram_url') }}</th>
+                                    <td>{{$setting->telegram_url}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" width="30%">{{ __('settings.attributes.distance_which_determine_available_winches') }}</th>
-                                    <td>{{$setting->distance_which_determine_available_winches}}</td>
+                                    <th scope="row">{{ __('settings.attributes.instagram_url') }}</th>
+                                    <td>{{$setting->instagram_url}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('settings.attributes.twitter_url') }}</th>
+                                    <td>{{$setting->twitter_url}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('settings.attributes.linkedin_url') }}</th>
+                                    <td>{{$setting->linkedin_url}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('settings.attributes.youtube_url') }}</th>
+                                    <td>{{$setting->youtube_url}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.created_at') }}</th>

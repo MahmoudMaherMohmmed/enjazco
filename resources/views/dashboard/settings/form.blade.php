@@ -93,37 +93,47 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.calling_number') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="calling_number" placeholder="{{ __('settings.attributes.calling_number') }}" value="{{$setting!=null ? $setting->calling_number : old('calling_number')}}" required="" type="text">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.whatsapp_number') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="whatsapp_number" placeholder="{{ __('settings.attributes.whatsapp_number') }}" value="{{$setting!=null ? $setting->whatsapp_number : old('whatsapp_number')}}" required="" type="text">
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.info_email') }}</label>
-                                    <input class="form-control" name="info_email" placeholder="{{ __('settings.attributes.info_email') }}" value="{{$setting!=null ? $setting->info_email : old('info_email')}}" type="email">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.support_email') }}</label>
-                                    <input class="form-control" name="support_email" placeholder="{{ __('settings.attributes.support_email') }}" value="{{$setting!=null ? $setting->support_email : old('support_email')}}" type="email">
-                                </div>
-                            </div>
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.distance_which_determine_available_winches') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="distance_which_determine_available_winches" placeholder="{{ __('settings.attributes.distance_which_determine_available_winches') }}" value="{{$setting!=null ? $setting->distance_which_determine_available_winches : old('distance_which_determine_available_winches')}}" required="" type="number">
+                                    <label class="form-label">{{ __('settings.attributes.facebook_url') }} <span class="tx-danger">*</span></label>
+                                    <input class="form-control" name="facebook_url" placeholder="{{ __('settings.attributes.facebook_url') }}" value="{{$setting!=null ? $setting->facebook_url : old('facebook_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.whatsapp_url') }} <span class="tx-danger">*</span></label>
+                                    <input class="form-control" name="whatsapp_url" placeholder="{{ __('settings.attributes.whatsapp_url') }}" value="{{$setting!=null ? $setting->whatsapp_url : old('whatsapp_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.telegram_url') }} <span class="tx-danger">*</span></label>
+                                    <input class="form-control" name="telegram_url" placeholder="{{ __('settings.attributes.telegram_url') }}" value="{{$setting!=null ? $setting->telegram_url : old('telegram_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.instagram_url') }}</label>
+                                    <input class="form-control" name="instagram_url" placeholder="{{ __('settings.attributes.instagram_url') }}" value="{{$setting!=null ? $setting->instagram_url : old('instagram_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.twitter_url') }}</label>
+                                    <input class="form-control" name="twitter_url" placeholder="{{ __('settings.attributes.twitter_url') }}" value="{{$setting!=null ? $setting->twitter_url : old('twitter_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.linkedin_url') }}</label>
+                                    <input class="form-control" name="linkedin_url" placeholder="{{ __('settings.attributes.linkedin_url') }}" value="{{$setting!=null ? $setting->linkedin_url : old('linkedin_url')}}" type="url">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.youtube_url') }}</label>
+                                    <input class="form-control" name="youtube_url" placeholder="{{ __('settings.attributes.youtube_url') }}" value="{{$setting!=null ? $setting->youtube_url : old('youtube_url')}}" type="url">
                                 </div>
                             </div>
 

@@ -23,6 +23,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::resource('blogs', App\Http\Controllers\Dashboard\BlogController::class);
         Route::resource('partners', App\Http\Controllers\Dashboard\PartnerController::class);
         Route::resource('branches', App\Http\Controllers\Dashboard\BranchController::class);
-        Route::resource('settings', App\Http\Controllers\Dashboard\SettingController::class)->only(['index', 'show', 'edit', 'update']);
+        Route::resource('settings', App\Http\Controllers\Dashboard\SettingController::class);
     });
 });
