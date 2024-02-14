@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('admins.plural')}} @endsection
+
 @section('css') @endsection
 
 @section('page-header')
@@ -8,7 +10,8 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.users') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('admins.actions.show') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.users.index') }}">{{ __('admins.plural') }}</a></span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$user->name}}</span>
             </div>
         </div>
     </div>
@@ -52,6 +55,18 @@
                                 <tr>
                                     <th scope="row">{{ __('admins.attributes.avatar') }}</th>
                                     <td> <img class="brround" height="200px" width="200px" src="{{$user->getAvatar()}}"> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('admins.actions.actions') }}</th>
+                                    <td>
+                                        @include('dashboard.users.partials.actions.edit')
+                                        @if($user->id != 1)
+                                            @include('dashboard.users.partials.actions.delete')
+                                        @endif
+                                    </td>
+                                    @if($user->id != 1)
+                                        @include('dashboard.users.partials.models.delete')
+                                    @endif
                                 </tr>
                             </tbody>
                         </table>

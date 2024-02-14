@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('admins.plural')}} @endsection
+
 @section('css')
     <!--- Internal Select2 css-->
     <link href="{{URL::asset('dashboard/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
@@ -15,7 +17,11 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.users') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $user!=null ? __('dashboard.edit_manager') : __('dashboard.create_manager') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.users.index') }}">{{ __('admins.plural') }}</a></span>
+                @if($user!=null)
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$user->name}}</span>
+                @endif
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $user!=null ? __('admins.actions.edit') : __('admins.actions.create') }}</span>
             </div>
         </div>
     </div>
@@ -68,7 +74,7 @@
                                     <input type="file" name="image" class="dropify" data-default-file="{{$user!=null ? $user->getAvatar() : ''}}" data-height="200" />
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.status') }} <span class="tx-danger">*</span></label>
