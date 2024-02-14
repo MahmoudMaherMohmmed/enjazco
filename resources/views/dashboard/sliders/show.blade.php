@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('sliders.plural')}} @endsection
+
 @section('css') @endsection
 
 @section('page-header')
@@ -8,7 +10,8 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('sliders.actions.show') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.sliders.index') }}">{{ __('sliders.plural') }}</a></span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $slider->getTranslation('title', app()->getLocale()) }}</span>
             </div>
         </div>
     </div>
@@ -48,6 +51,14 @@
                                 <tr>
                                     <th scope="row">{{ __('sliders.attributes.image') }}</th>
                                     <td> <img class="brround" height="200px" width="200px" src="{{$slider->getImage()}}"> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('sliders.actions.actions') }}</th>
+                                    <td>
+                                        @include('dashboard.sliders.partials.actions.edit')
+                                        @include('dashboard.sliders.partials.actions.delete')
+                                    </td>
+                                    @include('dashboard.sliders.partials.models.delete')
                                 </tr>
                             </tbody>
                         </table>

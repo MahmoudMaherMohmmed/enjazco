@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('services.plural')}} @endsection
+
 @section('css')
     <!--- Internal Select2 css-->
     <link href="{{URL::asset('dashboard/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
@@ -17,7 +19,11 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $service!=null ? __('dashboard.edit_brand') : __('dashboard.create_brand') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.services.index') }}">{{ __('services.plural') }}</a></span>
+                @if($service!=null)
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$service->getTranslation('title', app()->getLocale())}}</span>
+                @endif
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $service!=null ? __('services.actions.edit') : __('services.actions.create') }}</span>
             </div>
         </div>
     </div>
@@ -123,7 +129,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('services.attributes.icon') }} <span class="tx-danger">*</span></label>
@@ -137,7 +143,7 @@
                                     <input type="file" name="image" class="dropify" data-default-file="{{$service!=null ? $service->getImage() : ''}}" data-height="200" />
                                 </div>
                             </div>
-                            
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('services.attributes.status') }} <span class="tx-danger">*</span></label>
