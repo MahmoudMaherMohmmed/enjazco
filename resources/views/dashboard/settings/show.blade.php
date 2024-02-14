@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('settings.plural')}} @endsection
+
 @section('css') @endsection
 
 @section('page-header')
@@ -8,7 +10,8 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('settings.actions.show') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.settings.index') }}">{{ __('settings.plural') }}</a></span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $setting->getTranslation('title', app()->getLocale()) }}</span>
             </div>
         </div>
     </div>
@@ -72,6 +75,18 @@
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.image') }}</th>
                                     <td> <img class="brround" height="200px" width="200px" src="{{$setting->getImage()}}"> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('settings.actions.actions') }}</th>
+                                    <td>
+                                        @include('dashboard.settings.partials.actions.edit')
+                                        @if($setting->id != 1)
+                                            @include('dashboard.settings.partials.actions.delete')
+                                        @endif
+                                    </td>
+                                    @if($setting->id != 1)
+                                        @include('dashboard.settings.partials.models.delete')
+                                    @endif
                                 </tr>
                             </tbody>
                         </table>
