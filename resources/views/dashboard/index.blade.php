@@ -1,5 +1,8 @@
 @extends('dashboard.layouts.master')
-@section('css') 
+
+@section('title') {{ __('dashboard.home') }} @endsection
+
+@section('css')
     <!--  Owl-carousel css-->
     <link href="{{URL::asset('dashboard/assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
     <!-- Maps css -->
@@ -25,7 +28,7 @@
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
                             <div class="">
-                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$users_count}}</h4>
+                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$users->count()}}</h4>
                                 <a href="{{route('admin.users.index')}}"> <p class="mb-0 tx-12 text-white op-7">{{ __('admins.actions.list') }}</p> </a>
                             </div>
                         </div>
@@ -38,13 +41,13 @@
             <div class="card overflow-hidden sales-card bg-success-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">{{ __('clients.plural') }}</h6>
+                        <h6 class="mb-3 tx-12 text-white">{{ __('branches.plural') }}</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
                             <div class="">
-                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$clients_count}}</h4>
-                                <a href="{{route('clients.index')}}"> <p class="mb-0 tx-12 text-white op-7">{{ __('clients.actions.list') }}</p> </a>
+                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$branches}}</h4>
+                                <a href="{{route('admin.branches.index')}}"> <p class="mb-0 tx-12 text-white op-7">{{ __('branches.actions.list') }}</p> </a>
                             </div>
                         </div>
                     </div>
@@ -56,13 +59,13 @@
             <div class="card overflow-hidden sales-card bg-warning-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">{{ __('report_accidents.plural') }}</h6>
+                        <h6 class="mb-3 tx-12 text-white">{{ __('services.plural') }}</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
                             <div class="">
-                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$report_accidents}}</h4>
-                                <a href="{{route('report_accidents.index')}}"> <p class="mb-0 tx-12 text-white op-7">{{ __('report_accidents.actions.list') }}</p> </a>
+                                <h4 class="tx-20 font-weight-bold mb-1 text-white">{{$services}}</h4>
+                                <a href="{{route('admin.services.index')}}"> <p class="mb-0 tx-12 text-white op-7">{{ __('services.actions.list') }}</p> </a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +78,7 @@
 
     <!-- row opened -->
     <div class="row row-sm">
-        <div class="col-xl-6 col-md-12 col-lg-12">
+        <div class="col-xl-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header pb-1">
                     <h3 class="card-title mb-2">{{ __('admins.actions.latest') }}</h3>
@@ -91,33 +94,6 @@
                                         <div class="mt-0">
                                             <h5 class="mb-1 tx-15">{{$user->name}}</h5>
                                             <p class="mb-0 tx-13 text-muted">{{ __('dashboard.id') }}: #{{$user->id}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-xl-6 col-md-12 col-lg-12">
-            <div class="card">
-                <div class="card-header pb-1">
-                    <h3 class="card-title mb-2">{{ __('clients.actions.latest') }}</h3>
-                </div>
-                <div class="card-body p-0 customers mt-1">
-                    <div class="list-group list-lg-group list-group-flush">
-                        @foreach($clients as $client )
-                        <div class="list-group-item list-group-item-action" href="#">
-                            <div class="media mt-0">
-                                <img class="avatar-lg rounded-circle ml-3 my-auto" src="{{$client->getAvatar()}}">
-                                <div class="media-body">
-                                    <div class="d-flex align-items-center">
-                                        <div class="mt-0">
-                                            <h5 class="mb-1 tx-15">{{$client->username}}</h5>
-                                            <p class="mb-0 tx-13 text-muted">{{ __('dashboard.id') }}: #{{$client->id}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -152,5 +128,5 @@
     <script src="{{URL::asset('dashboard/assets/js/modal-popup.js')}}"></script>
     <!--Internal  index js -->
     <script src="{{URL::asset('dashboard/assets/js/index.js')}}"></script>
-    <script src="{{URL::asset('dashboard/assets/js/jquery.vmap.sampledata.js')}}"></script>	
+    <script src="{{URL::asset('dashboard/assets/js/jquery.vmap.sampledata.js')}}"></script>
 @endsection

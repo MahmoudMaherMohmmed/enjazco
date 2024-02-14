@@ -1,7 +1,8 @@
 <?php
 
 return [
+    'enjazco' => 'Enjazco',
     'home' => 'Home',
     'users' => 'Users',
-    'application' => 'Application',
+    'application' => 'Website Settings',
 ];

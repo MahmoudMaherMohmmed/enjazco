@@ -9,7 +9,7 @@
 		<meta name="Keywords" content="It, Solutions"/>
 
 		<!-- Title -->
-		<title> MS-ItSolutions - @yield('title') </title>
+		<title> {{ __('dashboard.enjazco') }} | @yield('title') </title>
 
 		<!-- Favicon -->
 		<link rel="icon" href="{{URL::asset('dashboard/assets/img/brand/favicon.png')}}" type="image/x-icon"/>
