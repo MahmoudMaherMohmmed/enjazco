@@ -1,5 +1,7 @@
 @extends('dashboard.layouts.master')
 
+@section('title') {{__('branches.plural')}} @endsection
+
 @section('css')
     <!--- Internal Select2 css-->
     <link href="{{URL::asset('dashboard/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
@@ -17,7 +19,11 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $branch!=null ? __('dashboard.edit_brand') : __('dashboard.create_brand') }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.branches.index') }}">{{ __('branches.plural') }}</a></span>
+                @if($branch!=null)
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$branch->getTranslation('title', app()->getLocale())}}</span>
+                @endif
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $branch!=null ? __('branches.actions.edit') : __('branches.actions.create') }}</span>
             </div>
         </div>
     </div>
