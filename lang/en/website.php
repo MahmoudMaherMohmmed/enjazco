@@ -29,4 +29,9 @@ return [
     'contact_subject' => 'Subject',
     'contact_message' => 'Message',
     'contact_send_message' => 'Send Message',
+    'read_more' => 'Read More',
+    'recent_post' => 'Recent Post',
+    'what_we_do' => 'What we do ?',
+    'reads_our_latest' => 'Reads Our Latest',
+    'news_blog' => 'News & Blog',
 ];

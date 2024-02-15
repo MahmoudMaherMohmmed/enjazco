@@ -250,14 +250,14 @@
             <div class="row align-items-center mb-4 pb-2">
                 <div class="col-lg-6">
                     <div class="section-title text-center text-lg-start">
-                        <h6 class="text-primary">Blog</h6>
-                        <h4 class="title mb-4 mb-lg-0">Reads Our Latest <br> News & Blog</h4>
+                        <h6 class="text-primary">{{__('website.blogs')}}</h6>
+                        <h4 class="title mb-4 mb-lg-0">{{__('website.reads_our_latest')}} <br> {{__('website.news_blog')}}</h4>
                     </div>
                 </div><!--end col-->
 
                 <div class="col-lg-6">
                     <div class="section-title text-center text-lg-start">
-                        <p class="text-muted mb-0 mx-auto para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <p class="text-muted mb-0 mx-auto para-desc">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -267,13 +267,13 @@
                 <div class="col-lg-4 col-md-6 mt-4 pt-2">
                     <div class="card blog blog-primary rounded border-0 shadow">
                         <div class="position-relative">
-                            <img src="{{$blog->getImage()}}" class="card-img-top rounded-top" alt="{{$blog->title}}">
+                            <img src="{{$blog->getImage()}}" class="card-img-top rounded-top" alt="{{$blog->title}}" style="height: 250px;">
                             <div class="overlay rounded-top"></div>
                         </div>
                         <div class="card-body content">
                             <h5><a href="{{route('blog.details', $blog->slug)}}" class="card-title title text-dark">{{$blog->title}}</a></h5>
                             <div class="post-meta d-flex justify-content-between mt-3">
-                                <a href="{{route('blog.details', $blog->slug)}}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                <a href="{{route('blog.details', $blog->slug)}}" class="text-muted readmore">{{__('website.read_more')}} <i class="uil uil-angle-right-b align-middle"></i></a>
                             </div>
                         </div>
                         <div class="author">

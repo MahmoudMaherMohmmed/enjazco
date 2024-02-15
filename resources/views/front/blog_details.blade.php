@@ -18,14 +18,14 @@
                         </div>
                     </div>
                 </div><!--end col-->
-            </div><!--end row--> 
+            </div><!--end row-->
 
-            
+
             <div class="position-breadcrumb">
                 <nav aria-label="breadcrumb" class="d-inline-block">
                     <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{route('blogs')}}">Blogs</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('index')}}">{{__('website.home')}}</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('blogs')}}">{{__('website.blogs')}}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{$blog->title}}</li>
                     </ul>
                 </nav>
@@ -65,7 +65,7 @@
                         <div class="card-body">
                             <!-- RECENT POST -->
                             <div class="widget mb-4 pb-2">
-                                <h5 class="widget-title">Recent Post</h5>
+                                <h5 class="widget-title">{{__('website.recent_post')}}</h5>
                                 <div class="mt-4">
                                     @foreach($blogs as $blog)
                                     <div class="d-flex align-items-center">

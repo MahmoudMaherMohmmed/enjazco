@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 
-@section('title') Blogs @endsection
+@section('title') {{__('website.blogs')}} @endsection
 
 @section('content')
     <!-- Hero Start -->
@@ -10,17 +10,17 @@
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
-                        <h2 class="text-white title-dark"> Blogs </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <h2 class="text-white title-dark"> {{__('website.blogs')}} </h2>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
-            </div><!--end row--> 
+            </div><!--end row-->
 
             <div class="position-breadcrumb">
                 <nav aria-label="breadcrumb" class="d-inline-block">
                     <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                        <li class="breadcrumb-item"><a href="{{route('index')}}">{{__('website.home')}}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{__('website.blogs')}}</li>
                     </ul>
                 </nav>
             </div>
@@ -43,7 +43,7 @@
                 @foreach($blogs as $blog)
                 <div class="col-lg-4 col-md-6 col-12 mb-4 pb-2">
                     <div class="card border-0 blog blog-primary shadow overflow-hidden">
-                        <img src="{{$blog->getImage()}}" class="img-fluid" alt="{{$blog->title}}">
+                        <img src="{{$blog->getImage()}}" class="img-fluid" alt="{{$blog->title}}" style="height: 250px;">
 
                         <div class="content card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -53,7 +53,7 @@
                             <h5><a href="{{route('blog.details', $blog->slug)}}" class="card-title title text-dark">{{$blog->title}}</a></h5>
 
                             <div class="post-meta d-flex justify-content-between mt-3">
-                                <a href="{{route('blog.details', $blog->slug)}}" class="text-muted readmore">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                <a href="{{route('blog.details', $blog->slug)}}" class="text-muted readmore">{{__('website.read_more')}} <i class="uil uil-angle-right-b align-middle"></i></a>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 
-@section('title') Services @endsection
+@section('title') {{__('website.services')}} @endsection
 
 @section('content')
     <!-- Hero Start -->
@@ -10,17 +10,17 @@
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
-                        <h2 class="text-white title-dark"> Services </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <h2 class="text-white title-dark"> {{__('website.services')}} </h2>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
-            </div><!--end row--> 
-            
+            </div><!--end row-->
+
             <div class="position-breadcrumb">
                 <nav aria-label="breadcrumb" class="d-inline-block">
                     <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Services</li>
+                        <li class="breadcrumb-item"><a href="{{route('index')}}">{{__('website.home')}}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{__('website.services')}}</li>
                     </ul>
                 </nav>
             </div>
@@ -42,9 +42,9 @@
             <div class="row align-items-end mb-4 pb-4">
                 <div class="col-md-8">
                     <div class="section-title text-center text-md-start">
-                        <h6 class="text-primary">Services</h6>
-                        <h4 class="title mb-4">What we do ?</h4>
-                        <p class="text-muted mb-0 para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <h6 class="text-primary">{{__('website.services')}}</h6>
+                        <h4 class="title mb-4">{{__('website.what_we_do')}}</h4>
+                        <p class="text-muted mb-0 para-desc">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div><!--end col-->
-                
+
                 <div class="col-md-4 mt-md-5 pt-md-3 mt-4 pt-2">
                     <div class="card features feature-primary feature-clean work-process bg-transparent process-arrow border-0 text-center">
                         <div class="icons text-center mx-auto">
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                 </div><!--end col-->
-                
+
                 <div class="col-md-4 mt-md-5 pt-md-5 mt-4 pt-2">
                     <div class="card features feature-primary feature-clean work-process bg-transparent d-none-arrow border-0 text-center">
                         <div class="icons text-center mx-auto">

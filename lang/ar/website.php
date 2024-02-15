@@ -29,4 +29,9 @@ return [
     'contact_subject' => 'عنوان الرسالة',
     'contact_message' => 'الرسالة',
     'contact_send_message' => 'ارسال',
+    'read_more' => 'المزيد',
+    'recent_post' => 'الاخبار الحالية',
+    'what_we_do' => 'ماذا يمكننا أن نفعل ؟',
+    'reads_our_latest' => 'أقرا أخر',
+    'news_blog' => 'المقالات والاخبار',
 ];
