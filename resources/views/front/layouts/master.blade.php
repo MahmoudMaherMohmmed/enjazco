@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en" dir="ltr">
+<html lang="{{app()->getLocale()}}" dir="{{LaravelLocalization::getCurrentLocaleDirection()}}">
     <head>
         <meta charset="utf-8">
-        <title>Enjazco | @yield('title')</title>
+        <title>{{$settings->title}} | @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
         <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
@@ -15,18 +15,26 @@
 
         <!-- favicon -->
         <link rel="shortcut icon" href="{{URL::asset('front/assets')}}/images/favicon.ico">
-        
+
         <!-- Css -->
         <link href="{{URL::asset('front/assets')}}/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
         <link href="{{URL::asset('front/assets')}}/libs/swiper/css/swiper.min.css" rel="stylesheet">
         <link href="{{URL::asset('front/assets')}}/libs/tobii/css/tobii.min.css" rel="stylesheet">
         <!-- Bootstrap Css -->
-        <link href="{{URL::asset('front/assets')}}/css/bootstrap.min.css" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css">
+        @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
+            <link href="{{URL::asset('front/assets')}}/css/bootstrap-rtl.min.css" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css">
+        @else
+            <link href="{{URL::asset('front/assets')}}/css/bootstrap.min.css" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css">
+        @endif
         <!-- Icons Css -->
         <link href="{{URL::asset('front/assets')}}/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
         <link href="{{URL::asset('front/assets')}}/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
         <!-- Style Css-->
-        <link href="{{URL::asset('front/assets')}}/css/style.min.css" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css">
+        @if(LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
+            <link href="{{URL::asset('front/assets')}}/css/style-rtl.min.css" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css">
+        @else
+            <link href="{{URL::asset('front/assets')}}/css/style.min.css" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css">
+        @endif
     </head>
 
     <body>
@@ -40,7 +48,7 @@
             </div>
         </div> -->
         <!-- Loader -->
-        
+
         <!-- Navbar Start -->
         <header id="topnav" class="defaultscroll sticky">
             <div class="container">
@@ -71,13 +79,27 @@
                 </div>
 
                 <div id="navigation">
-                    <!-- Navigation Menu-->   
+                    <!-- Navigation Menu-->
                     <ul class="navigation-menu nav-light">
-                        <li><a href="{{route('index')}}" class="sub-menu-item">Home</a></li>
-                        <li><a href="{{route('about')}}" class="sub-menu-item">About Us</a></li>
-                        <li><a href="{{route('services')}}" class="sub-menu-item">Services</a></li>
-                        <li><a href="{{route('blogs')}}" class="sub-menu-item">Blogs</a></li>
-                        <li><a href="{{route('contact')}}" class="sub-menu-item">Contact</a></li>
+                        <li><a href="{{route('index')}}" class="sub-menu-item">{{__('website.home')}}</a></li>
+                        <li><a href="{{route('about')}}" class="sub-menu-item">{{__('website.about_us')}}</a></li>
+                        <li><a href="{{route('services')}}" class="sub-menu-item">{{__('website.services')}}</a></li>
+                        <li><a href="{{route('blogs')}}" class="sub-menu-item">{{__('website.blogs')}}</a></li>
+                        <li><a href="{{route('contact')}}" class="sub-menu-item">{{__('website.contact')}}</a></li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)">{{__('website.language')}}</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    @if(app()->getLocale() != $localeCode)
+                                        <li>
+                                            <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}" class="sub-menu-item">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </li>
                     </ul><!--end navigation menu-->
                 </div><!--end navigation-->
             </div><!--end container-->
@@ -87,7 +109,7 @@
         @yield('content')
 
         <!-- Footer Start -->
-        <footer class="footer">    
+        <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -97,46 +119,60 @@
                                     <a href="#" class="logo-footer">
                                         <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="24" alt="">
                                     </a>
-                                    <p class="mt-4">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                                    <p class="mt-4">{{$settings->description}}</p>
                                     <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
-                                        <li class="list-inline-item mb-0"><a href="https://1.envato.market/landrick" target="_blank" class="rounded"><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="https://dribbble.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-dribbble align-middle" title="dribbble"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="https://www.behance.net/shreethemes" target="_blank" class="rounded"><i class="uil uil-behance align-middle" title="behance"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="https://www.facebook.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="https://www.instagram.com/shreethemes/" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="https://twitter.com/shreethemes" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
-                                        <li class="list-inline-item mb-0"><a href="mailto:support@shreethemes.in" class="rounded"><i class="uil uil-envelope align-middle" title="email"></i></a></li>
+                                        @if($settings->facebook_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->facebook_url}}" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+                                        @endif
+                                        @if($settings->whatsapp_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->whatsapp_url}}" target="_blank" class="rounded"><i class="uil uil-whatsapp align-middle" title="whatsapp"></i></a></li>
+                                        @endif
+                                        @if($settings->telegram_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->telegram_url}}" target="_blank" class="rounded"><i class="uil uil-telegram align-middle" title="telegram"></i></a></li>
+                                        @endif
+                                        @if($settings->instagram_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->instagram_url}}" target="_blank" class="rounded"><i class="uil uil-instagram align-middle" title="instagram"></i></a></li>
+                                        @endif
+                                        @if($settings->twitter_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->twitter_url}}" target="_blank" class="rounded"><i class="uil uil-twitter align-middle" title="twitter"></i></a></li>
+                                        @endif
+                                        @if($settings->linkedin_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->linkedin_url}}" target="_blank" class="rounded"><i class="uil uil-linkedin align-middle" title="linkedin"></i></a></li>
+                                        @endif
+                                        @if($settings->youtube_url != null)
+                                            <li class="list-inline-item mb-0"><a href="{{$settings->youtube_url}}" target="_blank" class="rounded"><i class="uil uil-youtube align-middle" title="youtube"></i></a></li>
+                                        @endif
                                     </ul><!--end icon-->
                                 </div><!--end col-->
-                                
+
                                 <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                                    <h5 class="footer-head">Usefull Links</h5>
+                                    <h5 class="footer-head">{{__('website.useful_links')}}</h5>
                                     <ul class="list-unstyled footer-list mt-4">
-                                        <li><a href="{{route('index')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Home</a></li>
-                                        <li><a href="{{route('about')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
-                                        <li><a href="{{route('services')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Services</a></li>
-                                        <li><a href="{{route('blogs')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Blogs</a></li>
-                                        <li><a href="{{route('contact')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> Contact</a></li>
+                                        <li><a href="{{route('index')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{__('website.home')}}</a></li>
+                                        <li><a href="{{route('about')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{__('website.about_us')}}</a></li>
+                                        <li><a href="{{route('services')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{__('website.services')}}</a></li>
+                                        <li><a href="{{route('blogs')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{__('website.blogs')}}</a></li>
+                                        <li><a href="{{route('contact')}}" class="text-foot"><i class="uil uil-angle-right-b me-1"></i> {{__('website.contact')}}</a></li>
                                     </ul>
                                 </div><!--end col-->
-            
+
                                 <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                                    <h5 class="footer-head">Newsletter</h5>
-                                    <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                                    <h5 class="footer-head">{{__('website.newsletter')}}</h5>
+                                    <p class="mt-4">{{__('website.signup_and_receive_the_latest_tips_via_email')}}</p>
                                     <form>
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="foot-subscribe mb-3">
-                                                    <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                                                    <label class="form-label">{{__('website.write_your_email')}} <span class="text-danger">*</span></label>
                                                     <div class="form-icon position-relative">
                                                         <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                        <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded" placeholder="Your email : " required>
+                                                        <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded" placeholder="{{__('website.your_email')}}" required>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="d-grid">
-                                                    <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary" value="Subscribe">
+                                                    <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary" value="{{__('website.subscribe')}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -153,7 +189,7 @@
                     <div class="row align-items-center">
                         <div class="col-sm-6">
                             <div class="text-sm-start">
-                                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Enjazco. Design with <i class="mdi mdi-heart text-white"></i> by Mahmoud Maher.</p>
                             </div>
                         </div><!--end col-->
 
