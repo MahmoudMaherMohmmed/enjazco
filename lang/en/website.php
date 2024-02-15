@@ -6,7 +6,7 @@ return [
     'about_us' => 'About us',
     'services' => 'Services',
     'blogs' => 'Blogs',
-    'contact' => 'Contact',
+    'contact' => 'Contact us',
     'language' => 'Language',
     //Footer
     'useful_links' => 'Useful Links',
@@ -15,4 +15,18 @@ return [
     'write_your_email' => 'Write your email',
     'your_email' => 'Your email : ',
     'subscribe' => 'Subscribe',
+    //Contact
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'location' => 'Location',
+    'start_working_with_enjazco_that_can_provide_everything' => 'Start working with enjazco that can provide everything',
+    'view_on_google_map' => 'View on Google map',
+    'get_in_touch' => 'Get In Touch !',
+    'contact_your_name' => 'Your Name',
+    'contact_name' => 'Name',
+    'contact_your_email' => 'Your Email',
+    'contact_email' => 'Email :',
+    'contact_subject' => 'Subject',
+    'contact_message' => 'Message',
+    'contact_send_message' => 'Send Message',
 ];

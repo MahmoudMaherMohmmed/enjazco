@@ -1,7 +1,7 @@
 
 @extends('front.layouts.master')
 
-@section('title') Home @endsection
+@section('title') {{__('website.home')}} @endsection
 
 @section('content')
     @if($sliders->isNotEmpty())
@@ -18,15 +18,15 @@
                                     <div class="title-heading text-center">
                                         <h1 class="display-5 text-white title-dark fw-bold mb-4">{{$slider->title}}</h1>
                                         <p class="para-desc mx-auto text-white-50">{{$slider->description}}</p>
-                                        
+
                                         <div class="mt-4 pt-2">
-                                            <a href="{{route('contact')}}" class="btn btn-primary">Contact us</a>
+                                            <a href="{{route('contact')}}" class="btn btn-primary">{{__('website.contact')}}</a>
                                         </div>
                                     </div>
                                 </div><!--end col-->
                             </div><!--end row-->
                         </div><!--end container-->
-                    </div><!-- end slide-inner --> 
+                    </div><!-- end slide-inner -->
                 </div> <!-- end swiper-slide -->
                 @endforeach
             </div>
@@ -50,44 +50,45 @@
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
                                     <div class="icons text-center mx-auto">
-                                        <i class="uil uil-airplay rounded h3 mb-0 mx-auto"></i>
+                                        <i class="uil uil-phone rounded h3 mb-0 mx-auto"></i>
                                     </div>
-        
+
                                     <div class="card-body p-0 content">
-                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Best Financial Advice</a></h5>
-                                        <p class="text-muted">The most well-known which is said to have originated</p>
-        
-                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">{{__('website.phone')}}</a></h5>
+                                        <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                                        <p class="text-muted">{{$main_branch->phone_number_1}}{{$main_branch->phone_number_2 != null ? ' / ' . $main_branch->phone_number_2 : ''}}</p>
                                     </div>
                                 </div>
                             </div><!--end col-->
-                            
+
                             <div class="col-lg-4 col-md-4 col-12 mt-4 mt-md-0 pt-2 pt-md-0">
                                 <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
                                     <div class="icons text-center mx-auto">
-                                        <i class="uil uil-clipboard-alt rounded h3 mb-0 mx-auto"></i>
+                                        <i class="uil uil-envelope rounded h3 mb-0 mx-auto"></i>
                                     </div>
-        
+
                                     <div class="card-body p-0 content">
-                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Authorised Finance Brand</a></h5>
-                                        <p class="text-muted">The most well-known which is said to have originated</p>
-        
-                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">{{__('website.email')}}</a></h5>
+                                        <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                                        <a href="mailto:{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div><!--end col-->
-                            
+
                             <div class="col-lg-4 col-md-4 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
                                 <div class="card features feature-primary feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
                                     <div class="icons text-center mx-auto">
-                                        <i class="uil uil-credit-card-search rounded h3 mb-0 mx-auto"></i>
+                                        <i class="uil uil-map-marker rounded h3 mb-0 mx-auto"></i>
                                     </div>
-        
+
                                     <div class="card-body p-0 content">
-                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Compehensive Advices</a></h5>
-                                        <p class="text-muted">The most well-known which is said to have originated</p>
-        
-                                        <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">{{__('website.location')}}</a></h5>
+                                        <p class="text-muted">{{$main_branch->address}}</p>
+                                        @if($main_branch->google_map != null)
+                                            <a href="{{$main_branch->google_map}}" data-type="iframe" class="video-play-icon read-more lightbox">{{__('website.view_on_google_map')}}</a>
+                                        @endif
+                                        <p></p>
                                     </div>
                                 </div>
                             </div><!--end col-->
@@ -182,7 +183,7 @@
                         <div class="icons text-start">
                             <i class="uil uil-airplay rounded h3 mb-0"></i>
                         </div>
-                        <div class="card-body p-0 mt-4">                                            
+                        <div class="card-body p-0 mt-4">
                             <a href="javascript:void(0)" class="title h5 text-dark">{{$service->title}}</a>
                             <p class="text-muted mt-2">{{$service->short_description}}</p>
                             <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b"></i></a>
@@ -191,7 +192,7 @@
                     </div>
                 </div><!--end col-->
                 @endforeach
-                
+
                 <div class="col-12 mt-4 pt-2 text-center">
                     <a href="{{route('services')}}" class="btn btn-primary">See More <i class="mdi mdi-arrow-right"></i></a>
                 </div><!--end col-->

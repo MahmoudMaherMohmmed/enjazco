@@ -15,4 +15,18 @@ return [
     'write_your_email' => 'اكتب بريدك الإلكتروني',
     'your_email' => 'بريدك الالكتروني :',
     'subscribe' => 'اشترك',
+    //Contact
+    'phone' => 'رقم الهاتف',
+    'email' => 'البريد الالكتروني',
+    'location' => 'العنوان',
+    'start_working_with_enjazco_that_can_provide_everything' => 'ابدأ العمل مع انجازكو التي يمكنها تقديم كل شيء',
+    'view_on_google_map' => 'عرض على خريطة جوجل',
+    'get_in_touch' => 'ابقى على تواصل !',
+    'contact_your_name' => 'الاسم',
+    'contact_name' => 'الاسم',
+    'contact_your_email' => 'بريدك الالكتروني',
+    'contact_email' => 'البريد الالكتورنى',
+    'contact_subject' => 'عنوان الرسالة',
+    'contact_message' => 'الرسالة',
+    'contact_send_message' => 'ارسال',
 ];

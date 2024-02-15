@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 
-@section('title') Contact Us @endsection
+@section('title') {{__('website.contact')}} @endsection
 
 @section('content')
     <!-- Hero Start -->
@@ -10,17 +10,17 @@
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
-                        <h2 class="text-white title-dark"> Contact Us </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <h2 class="text-white title-dark"> {{__('website.contact')}} </h2>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
-            </div><!--end row--> 
-        
+            </div><!--end row-->
+
             <div class="position-breadcrumb">
                 <nav aria-label="breadcrumb" class="d-inline-block">
                     <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
-                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        <li class="breadcrumb-item"><a href="{{route('index')}}">{{__('website.home')}}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{__('website.contact')}}</li>
                     </ul>
                 </nav>
             </div>
@@ -45,7 +45,7 @@
                 <div class="col-lg-5 col-md-6 pt-2 pt-sm-0 order-2 order-md-1">
                     <div class="card shadow rounded border-0">
                         <div class="card-body py-5">
-                            <h4 class="card-title">Get In Touch !</h4>
+                            <h4 class="card-title">{{__('website.get_in_touch')}}</h4>
                             <div class="custom-form mt-3">
                                 <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
                                     <p id="error-msg" class="mb-0"></p>
@@ -53,40 +53,40 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label class="form-label">Your Name <span class="text-danger">*</span></label>
+                                                <label class="form-label">{{__('website.contact_your_name')}} <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="user" class="fea icon-sm icons"></i>
-                                                    <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Name :">
+                                                    <input name="name" id="name" type="text" class="form-control ps-5" placeholder="{{__('website.contact_name')}} :">
                                                 </div>
                                             </div>
                                         </div>
-    
+
                                         <div class="col-md-6">
                                             <div class="mb-3">
-                                                <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                                                <label class="form-label">{{__('website.contact_your_email')}} <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                    <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email :">
-                                                </div>
-                                            </div> 
-                                        </div><!--end col-->
-    
-                                        <div class="col-12">
-                                            <div class="mb-3">
-                                                <label class="form-label">Subject</label>
-                                                <div class="form-icon position-relative">
-                                                    <i data-feather="book" class="fea icon-sm icons"></i>
-                                                    <input name="subject" id="subject" class="form-control ps-5" placeholder="subject :">
+                                                    <input name="email" id="email" type="email" class="form-control ps-5" placeholder="{{__('website.contact_email')}} :">
                                                 </div>
                                             </div>
                                         </div><!--end col-->
-    
+
                                         <div class="col-12">
                                             <div class="mb-3">
-                                                <label class="form-label">Comments <span class="text-danger">*</span></label>
+                                                <label class="form-label">{{__('website.contact_subject')}}</label>
+                                                <div class="form-icon position-relative">
+                                                    <i data-feather="book" class="fea icon-sm icons"></i>
+                                                    <input name="subject" id="subject" class="form-control ps-5" placeholder="{{__('website.contact_subject')}} :">
+                                                </div>
+                                            </div>
+                                        </div><!--end col-->
+
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">{{__('website.contact_message')}} <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
-                                                    <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Message :"></textarea>
+                                                    <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="{{__('website.contact_message')}} :"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +94,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="d-grid">
-                                                <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                                <button type="submit" id="submit" name="send" class="btn btn-primary">{{__('website.contact_send_message')}}</button>
                                             </div>
                                         </div><!--end col-->
                                     </div><!--end row-->
@@ -122,36 +122,41 @@
                             <i class="uil uil-phone rounded h3 mb-0"></i>
                         </div>
                         <div class="content mt-4">
-                            <h5 class="fw-bold">Phone</h5>
-                            <p class="text-muted">Start working with Landrick that can provide everything</p>
-                            <a href="tel:+152534-468-854" class="read-more">+152 534-468-854</a>
+                            <h5 class="fw-bold">{{__('website.phone')}}</h5>
+                            <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                            <a href="javascript:void(0)" class="read-more">{{$main_branch->telephone_number}}</a> <br>
+                            <a href="javascript:void(0)" class="read-more">{{$main_branch->phone_number_1}}</a> <br>
+                            <a href="javascript:void(0)" class="read-more">{{$main_branch->phone_number_2}}</a>
                         </div>
                     </div>
                 </div><!--end col-->
-                
+
                 <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
                     <div class="card border-0 text-center features feature-primary feature-clean">
                         <div class="icons text-center mx-auto">
                             <i class="uil uil-envelope rounded h3 mb-0"></i>
                         </div>
                         <div class="content mt-4">
-                            <h5 class="fw-bold">Email</h5>
-                            <p class="text-muted">Start working with Landrick that can provide everything</p>
-                            <a href="mailto:contact@example.com" class="read-more">contact@example.com</a>
+                            <h5 class="fw-bold">{{__('website.email')}}</h5>
+                            <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                            <a href="{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a>
+                            <a href="{{$main_branch->email_2}}" class="read-more">{{$main_branch->email_2}}</a>
                         </div>
                     </div>
                 </div><!--end col-->
-                
+
                 <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
                     <div class="card border-0 text-center features feature-primary feature-clean">
                         <div class="icons text-center mx-auto">
                             <i class="uil uil-map-marker rounded h3 mb-0"></i>
                         </div>
                         <div class="content mt-4">
-                            <h5 class="fw-bold">Location</h5>
-                            <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston, USA 485</p>
-                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                            <h5 class="fw-bold">{{__('website.location')}}</h5>
+                            <p class="text-muted">{{$main_branch->address}}</p>
+                            @if($main_branch->google_map != null)
+                            <a href="{{$main_branch->google_map}}"
                                 data-type="iframe" class="video-play-icon read-more lightbox">View on Google map</a>
+                            @endif
                         </div>
                     </div>
                 </div><!--end col-->
@@ -163,7 +168,7 @@
                 <div class="col-12 p-0">
                     <div class="card map border-0">
                         <div class="card-body p-0">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style="border:0" allowfullscreen></iframe>
+                            <iframe src="{{$main_branch->google_map}}" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div><!--end col-->
