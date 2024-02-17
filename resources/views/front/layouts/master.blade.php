@@ -14,7 +14,7 @@
         <meta name="Version" content="v4.7.0">
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="{{URL::asset('front/assets')}}/images/favicon.ico">
+        <link rel="shortcut icon" href="{{URL::asset('dashboard/assets/img/brand/favicon.png')}}">
 
         <!-- Css -->
         <link href="{{URL::asset('front/assets')}}/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
@@ -56,10 +56,10 @@
                 <div>
                     <a class="logo" href="index.html">
                         <span class="logo-light-mode">
-                            <img src="{{URL::asset('front/assets')}}/images/logo-dark.png" class="l-dark" height="24" alt="">
-                            <img src="{{URL::asset('front/assets')}}/images/logo-light.png" class="l-light" height="24" alt="">
+                            <img src="{{URL::asset('front/assets')}}/images/logo-dark.png" class="l-dark" height="67" alt="">
+                            <img src="{{URL::asset('front/assets')}}/images/logo-light.png" class="l-light" height="67" alt="">
                         </span>
-                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="24" class="logo-dark-mode" alt="">
+                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" class="logo-dark-mode" alt="">
                     </a>
                 </div>
 
@@ -117,7 +117,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
                                     <a href="#" class="logo-footer">
-                                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="24" alt="">
+                                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" alt="">
                                     </a>
                                     <p class="mt-4">{{$settings->description}}</p>
                                     <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">

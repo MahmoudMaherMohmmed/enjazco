@@ -26,7 +26,7 @@
 						<div class="row">
 							<div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
 								<div class="card-sigin">
-									<div class="mb-5 d-flex"> <a href="javascript:void(0)"><img src="{{URL::asset('dashboard/assets/img/brand/favicon.png')}}" class="sign-favicon ht-60" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Engaz</h1></div>
+									<div class="mb-5 d-flex"> <a href="javascript:void(0)"><img src="{{URL::asset('front/assets')}}/images/logo-dark.png" class="sign-favicon ht-90 wd-300" alt="logo"></a></div>
 									<div class="card-sigin">
 										<div class="main-signup-header">
 											<h2>{{ __('auth.welcome')}}</h2>
@@ -34,7 +34,7 @@
 											<form method="POST" action="{{ route('login') }}">
 												@csrf
 												<div class="form-group">
-													<label for="email">{{ __('auth.attributes.email') }}</label> 
+													<label for="email">{{ __('auth.attributes.email') }}</label>
 													<input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" autofocus autocomplete="email" placeholder="{{ __('auth.attributes.emailPlaceholder') }}" required>
 													@error('email')
 														<span class="invalid-feedback" role="alert">
