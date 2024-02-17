@@ -54,7 +54,7 @@
             <div class="container">
                 <!-- Logo container-->
                 <div>
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="{{route('index')}}">
                         <span class="logo-light-mode">
                             <img src="{{URL::asset('front/assets')}}/images/logo-dark.png" class="l-dark" height="67" alt="">
                             <img src="{{URL::asset('front/assets')}}/images/logo-light.png" class="l-light" height="67" alt="">
