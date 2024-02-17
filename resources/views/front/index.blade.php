@@ -178,7 +178,7 @@
 
             <div class="row align-items-center">
                 @foreach($services as $service)
-                <div class="col-lg-3 col-md-6 mt-4">
+                <div class="col-lg-3 col-md-6 mt-2 mb-2">
                     <div class="card border-0 features feature-primary feature-clean course-feature p-4 overflow-hidden shadow">
                         <div class="icons text-start">
                             <i class="{{$service->icon}} rounded h3 mb-0"></i>
