@@ -54,7 +54,7 @@
                             <li class="list-inline-item date text-muted"><i class="uil uil-calendar-alt text-dark"></i> {{$blog->created_at->format('d M Y')}}</li>
                         </ul>
 
-                        <p class="text-muted">{{$blog->description}}</p>
+                        <p class="text-muted">{!! $blog->description !!}</p>
                     </div>
                 </div><!--end col-->
                 <!-- BLog End -->

@@ -119,7 +119,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
-                                                            <textarea class="form-control" id="mytextarea" name="description[{{ $localeCode }}]" placeholder="{{ __('services.attributes.description') }}"
+                                                            <textarea class="form-control" id="textarea" name="description[{{ $localeCode }}]" placeholder="{{ __('services.attributes.description') }}"
                                                             rows="5">{{$service!=null ? $service->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
                                                         </div>
                                                     @endforeach
@@ -188,7 +188,7 @@
     <script src="https://cdn.tiny.cloud/1/u660t7v0ghxvvn0wj1qj99ttw5bacqox3tfx6iqmr6hoj7sr/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
-            selector: '#mytextarea'
+            selector: '#textarea'
         });
     </script>
 @endsection

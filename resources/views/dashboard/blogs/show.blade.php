@@ -38,7 +38,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('blogs.attributes.description') }}</th>
-                                    <td>{{$blog->getTranslation('description', app()->getLocale())}}</td>
+                                    <td>{!! $blog->getTranslation('description', app()->getLocale()) !!}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('blogs.attributes.status') }}</th>
