@@ -132,13 +132,6 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('services.attributes.icon') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="icon" class="dropify" data-default-file="{{$service!=null ? $service->getIcon() : ''}}" data-height="200" />
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group">
                                     <label class="form-label">{{ __('services.attributes.image') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$service!=null ? $service->getImage() : ''}}" data-height="200" />
                                 </div>

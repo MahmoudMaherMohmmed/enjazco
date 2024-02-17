@@ -53,10 +53,6 @@
                                     <td>{{$service->created_at->diffForHumans()}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('services.attributes.icon') }}</th>
-                                    <td> <img class="brround" height="200px" width="200px" src="{{$service->getIcon()}}"> </td>
-                                </tr>
-                                <tr>
                                     <th scope="row">{{ __('services.attributes.image') }}</th>
                                     <td> <img class="brround" height="200px" width="200px" src="{{$service->getImage()}}"> </td>
                                 </tr>

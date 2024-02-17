@@ -28,7 +28,6 @@ class UpdateServiceRequest extends FormRequest
             'short_description.*' => 'required|string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'icon' => 'sometimes|mimes:jpeg,png,jpg,svg',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
             'status' => 'required',
         ];

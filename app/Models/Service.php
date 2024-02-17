@@ -33,26 +33,14 @@ class Service extends Model implements HasMedia
         'status' => ServiceStatusEnum::class,
     ];
 
-    public const ICON_COLLECTION_NAME = 'service_icon';
-    public const ICON_COLLECTION_URL = 'dashboard/images/service_icon.png';
-
     public const MEDIA_COLLECTION_NAME = 'service_image';
     public const MEDIA_COLLECTION_URL = 'dashboard/images/service.png';
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection(self::ICON_COLLECTION_NAME)
-            ->useFallbackUrl(asset(self::ICON_COLLECTION_URL))
-            ->useFallbackPath(asset(self::ICON_COLLECTION_URL));
-
         $this->addMediaCollection(self::MEDIA_COLLECTION_NAME)
             ->useFallbackUrl(asset(self::MEDIA_COLLECTION_URL))
             ->useFallbackPath(asset(self::MEDIA_COLLECTION_URL));
-    }
-
-    public function getIcon()
-    {
-        return $this->getFirstMediaUrl(self::ICON_COLLECTION_NAME);
     }
 
     public function getImage()

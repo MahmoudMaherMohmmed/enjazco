@@ -40,10 +40,6 @@ class ServiceController extends Controller
     public function store(StoreServiceRequest $request)
     {
         $service = Service::create($request->validated());
-        if ($request->hasFile('icon') && $request->file('icon')->isValid()) {
-            $service->addMediaFromRequest('icon')
-                ->toMediaCollection(Service::ICON_COLLECTION_NAME);
-        }
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $service->addMediaFromRequest('image')
                 ->toMediaCollection(Service::MEDIA_COLLECTION_NAME);
@@ -84,13 +80,6 @@ class ServiceController extends Controller
     public function update(UpdateServiceRequest $request, Service $service)
     {
         $service->update($request->validated());
-
-        if ($request->hasFile('icon') && $request->file('icon')->isValid()) {
-            $service->clearMediaCollection(Service::ICON_COLLECTION_NAME);
-            $service->addMediaFromRequest('icon')
-                ->toMediaCollection(Service::ICON_COLLECTION_NAME);
-        }
-
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $service->clearMediaCollection(Service::MEDIA_COLLECTION_NAME);
             $service->addMediaFromRequest('image')
