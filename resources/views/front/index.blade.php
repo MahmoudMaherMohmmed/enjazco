@@ -150,13 +150,13 @@
                 <div class="col-lg-7 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
                     <div class="ms-lg-4">
                         <div class="section-title">
-                            <span class="badge bg-soft-primary rounded-pill fw-bold">About us</span>
+                            <span class="badge bg-soft-primary rounded-pill fw-bold">{{__('website.about_us')}}</span>
                             <h4 class="title mb-4 mt-3">We design and develop <br> world-class web applications.</h4>
                             <p class="text-muted para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect. The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century.</p>
                         </div>
 
                         <div class="mt-4 pt-2">
-                            <a href="https://1.envato.market/landrick" target="_blank" class="btn btn-primary m-1">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            <a href="https://1.envato.market/landrick" target="_blank" class="btn btn-primary m-1">{{__('website.read_more')}} <i class="uil uil-angle-right-b align-middle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -170,8 +170,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="section-title mb-4 pb-2">
-                        <h4 class="title mb-4">Key Features</h4>
-                        <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <h4 class="title mb-4">{{__('website.services')}}</h4>
+                        <p class="text-muted para-desc mx-auto mb-0">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -186,7 +186,6 @@
                         <div class="card-body p-0 mt-4">
                             <a href="javascript:void(0)" class="title h5 text-dark">{{$service->title}}</a>
                             <p class="text-muted mt-2">{{$service->short_description}}</p>
-                            <a href="javascript:void(0)" class="read-more">Read More <i class="uil uil-angle-right-b"></i></a>
                             <i class="uil uil-airplay full-img"></i>
                         </div>
                     </div>
@@ -194,7 +193,7 @@
                 @endforeach
 
                 <div class="col-12 mt-4 pt-2 text-center">
-                    <a href="{{route('services')}}" class="btn btn-primary">See More <i class="mdi mdi-arrow-right"></i></a>
+                    <a href="{{route('services')}}" class="btn btn-primary">{{__('website.see_more')}} <i class="mdi mdi-arrow-right"></i></a>
                 </div><!--end col-->
             </div><!--end row-->
         </div><!--end container-->
@@ -209,11 +208,6 @@
                     <div class="video-solution-cta position-relative" style="z-index: 1;">
                         <div class="position-relative">
                             <img src="{{URL::asset('front/assets')}}/images/cta-bg.jpg" class="img-fluid rounded-md shadow-lg" alt="">
-                            <div class="play-icon">
-                                <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="play-btn lightbox border-0">
-                                    <i class="mdi mdi-play text-primary rounded-circle shadow-lg"></i>
-                                </a>
-                            </div>
                         </div>
                         <div class="content mt-md-4 pt-md-2">
                             <div class="row justify-content-center">
