@@ -102,7 +102,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('branches.attributes.google_map') }}</label>
+                                    <label class="form-label">{{ __('branches.attributes.google_map') }} <span class="tx-danger">*</span></label>
                                     <textarea class="form-control" name="google_map" placeholder="{{ __('branches.attributes.google_map') }}"
                                               rows="3">{{$branch!=null ? $branch->google_map : old('google_map')}}</textarea>
                                 </div>

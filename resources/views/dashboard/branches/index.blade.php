@@ -43,6 +43,7 @@
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.id') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.title') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.addess') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.created_at') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.actions.actions') }}</th>
@@ -53,6 +54,7 @@
                                     <tr>
                                         <td>{{$branch->id}}</td>
                                         <td>{{$branch->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$branch->getTranslation('address', app()->getLocale())}}</td>
                                         <td>
                                             <span class="badge {{$branch->status->color()}}">{{$branch->status->trans()}}</span>
                                         </td>

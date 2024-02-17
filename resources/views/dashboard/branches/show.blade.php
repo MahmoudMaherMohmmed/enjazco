@@ -37,6 +37,34 @@
                                     <td>{{$branch->getTranslation('title', app()->getLocale())}}</td>
                                 </tr>
                                 <tr>
+                                    <th scope="row">{{ __('branches.attributes.address') }}</th>
+                                    <td>{{$branch->getTranslation('address', app()->getLocale())}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.google_map') }}</th>
+                                    <td>{{$branch->google_map}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.phone_number_1') }}</th>
+                                    <td>{{$branch->phone_number_1}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.phone_number_2') }}</th>
+                                    <td>{{$branch->phone_number_2}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.telephone_number') }}</th>
+                                    <td>{{$branch->telephone_number}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.email_1') }}</th>
+                                    <td>{{$branch->email_1}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('branches.attributes.email_2') }}</th>
+                                    <td>{{$branch->email_2}}</td>
+                                </tr>
+                                <tr>
                                     <th scope="row">{{ __('branches.attributes.status') }}</th>
                                     <td> <span class="badge {{$branch->status->color()}}">{{$branch->status->trans()}}</span> </td>
                                 </tr>

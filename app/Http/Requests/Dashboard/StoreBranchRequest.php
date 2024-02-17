@@ -26,7 +26,7 @@ class StoreBranchRequest extends FormRequest
             'title.*' => 'string',
             'address' => 'required|array',
             'address.*' => 'required|string',
-            'google_map' => 'nullable|string',
+            'google_map' => 'required|string',
             'phone_number_1' => 'required|string',
             'phone_number_2' => 'nullable|string',
             'telephone_number' => 'required|string',
