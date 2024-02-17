@@ -28,6 +28,7 @@ class StoreServiceRequest extends FormRequest
             'short_description.*' => 'required|string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
+            'icon' => 'required',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
             'status' => 'required',
         ];

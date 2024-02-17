@@ -70,7 +70,7 @@
                         <div class="tab-pane fade {{$loop->first ? 'show active' : ''}} p-4 rounded shadow" id="service_{{$service->id}}" role="tabpanel">
                             <img src="{{$service->getImage()}}" class="img-fluid rounded shadow" alt="">
                             <div class="mt-4">
-                                <p class="text-muted">{{$service->description}}</p>
+                                <p class="text-muted">{!! $service->description !!}</p>
                             </div>
                         </div><!--end teb pane-->
                         @endforeach

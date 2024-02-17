@@ -119,7 +119,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
-                                                            <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('services.attributes.description') }}"
+                                                            <textarea class="form-control" id="mytextarea" name="description[{{ $localeCode }}]" placeholder="{{ __('services.attributes.description') }}"
                                                             rows="5">{{$service!=null ? $service->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
                                                         </div>
                                                     @endforeach
@@ -127,6 +127,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('services.attributes.icon') }} <span class="tx-danger">*</span> <br></label>
+                                    <input class="form-control" name="icon" placeholder="{{ __('services.attributes.icon') }}" value="{{$service!=null ? $service->icon : old('icon')}}" required="" type="text">
+                                    <span>You Can Get Icon Options By <a href="https://iconscout.com/unicons/free-line-icons">Click here</a></span>
                                 </div>
                             </div>
 
@@ -176,4 +184,11 @@
     <script src="{{URL::asset('dashboard/assets/plugins/fancyuploder/fancy-uploader.js')}}"></script>
     <!-- Internal Input tags js-->
     <script src="{{URL::asset('dashboard/assets/plugins/inputtags/inputtags.js')}}"></script>
+
+    <script src="https://cdn.tiny.cloud/1/u660t7v0ghxvvn0wj1qj99ttw5bacqox3tfx6iqmr6hoj7sr/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
 @endsection

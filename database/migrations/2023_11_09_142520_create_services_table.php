@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->text('title');
             $table->text('short_description')->nullable();
             $table->text('description')->nullable();
+            $table->string('icon');
             $table->boolean('status')->default(ServiceStatusEnum::ACTIVE->value);
             $table->timestamps();
         });

@@ -42,7 +42,11 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('services.attributes.description') }}</th>
-                                    <td>{{$service->getTranslation('description', app()->getLocale())}}</td>
+                                    <td>{!! $service->getTranslation('description', app()->getLocale()) !!}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{ __('services.attributes.icon') }}</th>
+                                    <td>{{$service->icon}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('services.attributes.status') }}</th>

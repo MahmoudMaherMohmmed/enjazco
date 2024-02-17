@@ -181,7 +181,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="card border-0 features feature-primary feature-clean course-feature p-4 overflow-hidden shadow">
                         <div class="icons text-start">
-                            <i class="uil uil-airplay rounded h3 mb-0"></i>
+                            <i class="{{$service->icon}} rounded h3 mb-0"></i>
                         </div>
                         <div class="card-body p-0 mt-4">
                             <a href="javascript:void(0)" class="title h5 text-dark">{{$service->title}}</a>
