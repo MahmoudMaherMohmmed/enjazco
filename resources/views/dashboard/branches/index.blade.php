@@ -43,7 +43,7 @@
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.id') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.addess') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.address') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.created_at') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.actions.actions') }}</th>
