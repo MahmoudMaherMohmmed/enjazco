@@ -35,4 +35,6 @@ return [
     'what_we_do' => 'What we do ?',
     'reads_our_latest' => 'Reads Our Latest',
     'news_blog' => 'News & Blog',
+    'powerful_features_of' => 'Powerful Features of',
+    'logistics' => 'Logistics',
 ];

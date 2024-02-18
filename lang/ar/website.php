@@ -35,4 +35,6 @@ return [
     'what_we_do' => 'ماذا يمكننا أن نفعل ؟',
     'reads_our_latest' => 'أقرا أخر',
     'news_blog' => 'المقالات والاخبار',
+    'powerful_features_of' => 'الميزات القوية ل',
+    'logistics' => 'للخدمات اللوجستية',
 ];
