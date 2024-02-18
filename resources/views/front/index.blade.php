@@ -104,7 +104,7 @@
                     <div class="position-relative">
                         <img src="{{URL::asset('front/assets')}}/images/logistics/about.png" class="rounded img-fluid mx-auto d-block" alt="">
                     </div>
-                </div><!--end col-->
+                </div><!--end col-->      
 
                 <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="section-title ms-lg-4">
