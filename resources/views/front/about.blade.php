@@ -37,7 +37,7 @@
 
     <!-- Start -->
     <section class="section">
-        <div class="container mt-100 mt-60">
+        <div class="container mt-60 mb-5">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="position-relative">
