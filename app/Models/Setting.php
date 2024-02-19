@@ -16,6 +16,7 @@ class Setting extends Model implements HasMedia
 
     protected $fillable = [
         'title',
+        'short_description',
         'description',
         'facebook_url',
         'whatsapp_url',
@@ -26,7 +27,7 @@ class Setting extends Model implements HasMedia
         'youtube_url',
     ];
 
-    public $translatable = ['title', 'description'];
+    public $translatable = ['title', 'short_description', 'description'];
 
 
     public const MEDIA_COLLECTION_NAME = 'settings_image';

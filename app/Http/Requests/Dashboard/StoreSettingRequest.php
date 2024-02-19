@@ -24,6 +24,8 @@ class StoreSettingRequest extends FormRequest
         return [
             'title' => 'required|array',
             'title.*' => 'string',
+            'short_description' => 'required|array',
+            'short_description.*' => 'required|string',
             'description' => 'required|array',
             'description.*' => 'required|string',
             'facebook_url' => 'nullable|url',

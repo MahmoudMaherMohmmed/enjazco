@@ -37,8 +37,12 @@
                                     <td>{{$setting->getTranslation('title', app()->getLocale())}}</td>
                                 </tr>
                                 <tr>
+                                    <th scope="row">{{ __('settings.attributes.short_description') }}</th>
+                                    <td>{!! $setting->getTranslation('short_description', app()->getLocale()) !!}</td>
+                                </tr>
+                                <tr>
                                     <th scope="row">{{ __('settings.attributes.description') }}</th>
-                                    <td>{{$setting->getTranslation('description', app()->getLocale())}}</td>
+                                    <td>{!! $setting->getTranslation('description', app()->getLocale()) !!}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.facebook_url') }}</th>

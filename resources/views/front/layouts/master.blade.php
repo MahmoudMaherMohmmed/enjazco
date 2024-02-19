@@ -119,7 +119,7 @@
                                     <a href="#" class="logo-footer">
                                         <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" alt="">
                                     </a>
-                                    <p class="mt-4">{{$settings->description}}</p>
+                                    <p class="mt-4">{!! $settings->short_description !!}</p>
                                     <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
                                         @if($settings->facebook_url != null)
                                             <li class="list-inline-item mb-0"><a href="{{$settings->facebook_url}}" target="_blank" class="rounded"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>

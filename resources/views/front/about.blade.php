@@ -49,7 +49,7 @@
                     <div class="section-title ms-lg-4">
                         <h6>{{__('website.about_us')}}</h6>
                         <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span> {{__('website.logistics')}}</h4>
-                        <p class="text-muted">{{$settings->description}}</p>
+                        <p class="text-muted">{!! $settings->description !!}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

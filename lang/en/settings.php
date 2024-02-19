@@ -26,6 +26,7 @@ return [
     'attributes' => [
         'id' => 'ID',
         'title' => 'Title',
+        'short_description' => 'Short description',
         'description' => 'Description',
         'facebook_url' => 'Facebook URL',
         'whatsapp_url' => 'Whatsapp URL',

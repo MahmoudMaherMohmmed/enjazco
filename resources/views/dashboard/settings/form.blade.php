@@ -72,6 +72,36 @@
 
                             <div class="col-12">
                                 <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.short_description') }} <span class="tx-danger">*</span></label>
+                                    <div class="example">
+                                        <div class="panel panel-primary tabs-style-1">
+                                            <div class=" tab-menu-heading">
+                                                <div class="tabs-menu1">
+                                                    <!-- Tabs -->
+                                                    <ul class="nav panel-tabs main-nav-line">
+                                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                                            <li class="nav-item"><a href="#tab-short_description-{{ $localeCode }}" class="nav-link {{$loop->first ? 'active' : ''}}" data-toggle="tab">{{ $properties['native'] }}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body tabs-menu-body main-content-body-right border-top-0 border">
+                                                <div class="tab-content">
+                                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                                        <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-short_description-{{ $localeCode }}">
+                                                            <textarea class="form-control" id="textarea" name="short_description[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.short_description') }}"
+                                                                      rows="5">{{$setting!=null ? $setting->getTranslation('short_description', $localeCode) : old('short_description[$localeCode]')}}</textarea>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.description') }}</label>
                                     <div class="example">
 										<div class="panel panel-primary tabs-style-1">
@@ -89,7 +119,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
-                                                            <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.description') }}"
+                                                            <textarea class="form-control" id="textarea" name="description[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.description') }}"
                                                             rows="5">{{$setting!=null ? $setting->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
                                                         </div>
                                                     @endforeach
@@ -178,4 +208,11 @@
     <script src="{{URL::asset('dashboard/assets/plugins/fancyuploder/fancy-uploader.js')}}"></script>
     <!-- Internal Input tags js-->
     <script src="{{URL::asset('dashboard/assets/plugins/inputtags/inputtags.js')}}"></script>
+
+    <script src="https://cdn.tiny.cloud/1/u660t7v0ghxvvn0wj1qj99ttw5bacqox3tfx6iqmr6hoj7sr/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#textarea'
+        });
+    </script>
 @endsection

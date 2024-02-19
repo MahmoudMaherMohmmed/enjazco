@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->text('title');
+            $table->text('short_description')->nullable();
             $table->text('description')->nullable();
             $table->text('facebook_url')->nullable();
             $table->text('whatsapp_url')->nullable();

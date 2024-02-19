@@ -26,6 +26,7 @@ return [
     'attributes' => [
         'id' => 'الرقم التسلسلي',
         'title' => 'الاسم',
+        'short_description' => 'وصف قصير',
         'description' => 'الوصف',
         'facebook_url' => 'رابط حساب او صفحة الفيس بوك',
         'whatsapp_url' => 'رابط حساب او قناة الواتس اب',

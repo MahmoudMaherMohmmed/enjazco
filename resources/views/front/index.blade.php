@@ -104,13 +104,13 @@
                     <div class="position-relative">
                         <img src="{{URL::asset('front/assets')}}/images/logistics/about.png" class="rounded img-fluid mx-auto d-block" alt="">
                     </div>
-                </div><!--end col-->      
+                </div><!--end col-->
 
                 <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="section-title ms-lg-4">
                         <h6>{{__('website.about_us')}}</h6>
                         <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span> {{__('website.logistics')}}</h4>
-                        <p class="text-muted">{{$settings->description}}</p>
+                        <p class="text-muted">{!! $settings->short_description !!}</p>
                         <a href="{{route('about')}}" class="btn btn-primary mt-3">{{__('website.read_more')}} <i class="uil uil-angle-right-b"></i></a>
                     </div>
                 </div><!--end col-->
