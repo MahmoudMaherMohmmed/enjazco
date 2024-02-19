@@ -205,13 +205,13 @@
     <!-- End -->
 
     <!-- Start CTA -->
-    <section class="section bg-cta" style="background: url('assets/images/logistics/cta.jpg') center;">
+    <section class="section bg-cta" style="background: url('{{URL::asset('front/assets')}}/images/logistics/cta.jpg') center;">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="title-heading">
-                        <img src="assets/images/logo-light.png" height="24" alt="">
+                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="24" alt="">
                         <h4 class="heading title-dark text-white my-4">World’s Leading Contract <br> Logistics Provider</h4>
                         <p class="text-white-50 para-dark para-desc mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
                     </div>
