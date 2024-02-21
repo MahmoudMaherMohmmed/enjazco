@@ -24,5 +24,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::resource('partners', App\Http\Controllers\Dashboard\PartnerController::class);
         Route::resource('branches', App\Http\Controllers\Dashboard\BranchController::class);
         Route::resource('settings', App\Http\Controllers\Dashboard\SettingController::class);
+        Route::resource('contacts', App\Http\Controllers\Dashboard\ContactController::class)->only(['index', 'show']);
     });
 });

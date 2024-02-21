@@ -204,23 +204,6 @@
     </section><!--end section-->
     <!-- End -->
 
-    <!-- Start CTA -->
-    <section class="section bg-cta" style="background: url('{{URL::asset('front/assets')}}/images/logistics/cta.jpg') center;">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <div class="title-heading">
-                        <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" alt="">
-                        <h4 class="heading title-dark text-white my-4">World’s Leading Contract <br> Logistics Provider</h4>
-                        <p class="text-white-50 para-dark para-desc mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                    </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end container-->
-    </section><!--end section-->
-    <!-- End CTA -->
-
     @if($blogs->isNotEmpty())
     <section class="section">
         <div class="container mt-100 mt-60">
