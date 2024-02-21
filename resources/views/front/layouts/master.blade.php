@@ -6,12 +6,11 @@
         <meta charset="utf-8">
         <title>{{$settings->title}} | @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
-        <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
-        <meta name="author" content="Shreethemes">
-        <meta name="email" content="support@shreethemes.in">
-        <meta name="website" content="https://shreethemes.in">
-        <meta name="Version" content="v4.7.0">
+        <meta name="description" content="{!! $settings->short_description !!}">
+        <meta name="author" content="Mahmoud Maher">
+        <meta name="email" content="mahmoudmaherfcih30051994@gmail.com">
+        <meta name="website" content="https://enjazco-eg.com/">
+        <meta name="Version" content="v1.0.0">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="{{URL::asset('dashboard/assets/img/brand/favicon.png')}}">
