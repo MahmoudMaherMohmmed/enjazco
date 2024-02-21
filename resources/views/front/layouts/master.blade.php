@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <title>{{$settings->title}} | @yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{!! $settings->short_description !!}">
+        <meta name="description" content="Enjazco was established to supply customers and trading partners with a fully customized logistics solutions services. We pride ourselves on being a truly integrated door to door logistics solutions provider. Our excellent expertise, professional skills, global network, logistics solutions knowledge, effective management and hard worker people give us the ability to provide our customers with a fully customized door to door logistics solutions.">
         <meta name="author" content="Mahmoud Maher">
         <meta name="email" content="mahmoudmaherfcih30051994@gmail.com">
         <meta name="website" content="https://enjazco-eg.com/">
