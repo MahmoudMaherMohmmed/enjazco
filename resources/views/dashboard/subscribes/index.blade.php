@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.master')
 
-@section('title') {{__('contacts.plural')}} @endsection
+@section('title') {{__('subscribes.plural')}} @endsection
 
 @section('css')
     <!-- Internal Data table css -->
@@ -17,8 +17,8 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">{{ __('contacts.plural') }}</h4>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('contacts.plural') }}</span>
+                <h4 class="content-title mb-0 my-auto">{{ __('subscribes.plural') }}</h4>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ __('subscribes.plural') }}</span>
             </div>
         </div>
         <div class="d-flex my-xl-auto right-content">
@@ -39,32 +39,25 @@
                         <table class="table text-md-nowrap" id="example2">
                             <thead>
                                 <tr>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.name') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.email') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.subject') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.read_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.id') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.email') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.created_at') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.read_at') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($contacts as $contact)
+                                @foreach($subscribes as $subscribe)
                                     <tr>
                                         <td>
-                                            {{$contact->id}}
-                                            @if($contact->read_at == null)
-                                                <span class="badge badge-info" style="margin-right: 1rem; background-color: #0f6be9;">{{ __('contacts.attributes.new') }}</span>
+                                            {{$subscribe->id}}
+                                            @if($subscribe->read_at == null)
+                                                <span class="badge badge-info" style="margin-right: 1rem; background-color: #0f6be9;">{{ __('subscribes.attributes.new') }}</span>
+                                                @php $subscribe->markAsRead() @endphp
                                             @endif
                                         </td>
-                                        <td>{{$contact->name}}</td>
-                                        <td>{{$contact->email}}</td>
-                                        <td>{{$contact->subject}}</td>
-                                        <td>{{$contact->created_at->diffForHumans()}}</td>
-                                        <td style="direction: ltr;">{{$contact->read_at}}</td>
-                                        <td>
-                                            @include('dashboard.contacts.partials.actions.show')
-                                        </td>
+                                        <td>{{$subscribe->email}}</td>
+                                        <td>{{$subscribe->created_at->diffForHumans()}}</td>
+                                        <td style="direction: ltr;">{{$subscribe->read_at}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

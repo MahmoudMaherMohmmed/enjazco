@@ -35,6 +35,7 @@
                     @include('dashboard.branches.partials.actions.sidebar')
 					@include('dashboard.settings.partials.actions.sidebar')
                     @include('dashboard.contacts.partials.actions.sidebar')
+                    @include('dashboard.subscribes.partials.actions.sidebar')
 				</ul>
 			</div>
 		</aside>

@@ -32,6 +32,7 @@ return [
         'message' => 'نص الرسالة',
         'read_at' => 'تاريخ العرض',
         'created_at' => 'تاريخ الاضافة',
+        'new' => 'جديد',
     ],
     'dialogs' => [
         'delete' => [

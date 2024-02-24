@@ -39,6 +39,7 @@ return [
             'info' => 'Are you sure you want to delete the contact ?',
             'confirm' => 'Delete',
             'cancel' => 'Cancel',
+            'new' => 'New',
         ]
     ]
 ];
