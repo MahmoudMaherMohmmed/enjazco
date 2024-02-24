@@ -26,5 +26,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('blogs', [App\Http\Controllers\Front\HomeController::class, 'blogs'])->name('blogs');
     Route::get('blog/{slug}', [App\Http\Controllers\Front\HomeController::class, 'blogDetails'])->name('blog.details');
     Route::get('contact', [App\Http\Controllers\Front\HomeController::class, 'contact'])->name('contact');
+    Route::post('contact/save_message', [App\Http\Controllers\Front\HomeController::class, 'saveContactMessage'])->name('contact.save_message');
     Route::post('subscribe', [App\Http\Controllers\Front\HomeController::class, 'subscribe'])->name('subscribe');
 });

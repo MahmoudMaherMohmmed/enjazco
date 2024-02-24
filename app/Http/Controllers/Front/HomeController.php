@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Front\StoreContactMessageRequest;
 use App\Http\Requests\Front\StoreSubscribeRequest;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Subscribe;
@@ -90,6 +92,19 @@ class HomeController extends Controller
     public function contact()
     {
         return view('front.contact');
+    }
+
+    /**
+     * Save contact message.
+     *
+     * @param \App\Http\Requests\Front\StoreContactMessageRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function saveContactMessage(StoreContactMessageRequest $request)
+    {
+        Contact::create($request->validated());
+
+        return back()->with('success', trans('contacts.messages.created'));
     }
 
     /**

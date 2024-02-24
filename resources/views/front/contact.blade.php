@@ -47,9 +47,8 @@
                         <div class="card-body py-5">
                             <h4 class="card-title">{{__('website.get_in_touch')}}</h4>
                             <div class="custom-form mt-3">
-                                <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
-                                    <p id="error-msg" class="mb-0"></p>
-                                    <div id="simple-msg"></div>
+                                <form method="post" action="{{route('contact.save_message')}}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mb-3">
@@ -86,7 +85,7 @@
                                                 <label class="form-label">{{__('website.contact_message')}} <span class="text-danger">*</span></label>
                                                 <div class="form-icon position-relative">
                                                     <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
-                                                    <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="{{__('website.contact_message')}} :"></textarea>
+                                                    <textarea name="message" id="message" rows="4" class="form-control ps-5" placeholder="{{__('website.contact_message')}} :"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -100,6 +99,9 @@
                                     </div><!--end row-->
                                 </form>
                             </div><!--end custom-form-->
+                            <div class="mt-3">
+                                @include('front.layouts.partials.messages')
+                            </div>
                         </div>
                     </div>
                 </div><!--end col-->
