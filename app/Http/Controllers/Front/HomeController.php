@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Front\StoreSubscribeRequest;
 use App\Models\Blog;
 use App\Models\Service;
 use App\Models\Slider;
+use App\Models\Subscribe;
 
 class HomeController extends Controller
 {
@@ -88,5 +90,18 @@ class HomeController extends Controller
     public function contact()
     {
         return view('front.contact');
+    }
+
+    /**
+     * Save subscribe.
+     *
+     * @param \App\Http\Requests\Front\StoreSubscribeRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function subscribe(StoreSubscribeRequest $request)
+    {
+        Subscribe::create($request->validated());
+
+        return back()->with('success', trans('subscribes.messages.created'));
     }
 }

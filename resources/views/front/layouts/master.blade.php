@@ -158,7 +158,8 @@
                                 <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                     <h5 class="footer-head">{{__('website.newsletter')}}</h5>
                                     <p class="mt-4">{{__('website.signup_and_receive_the_latest_tips_via_email')}}</p>
-                                    <form>
+                                    <form method="post" action="{{route('subscribe')}}">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="foot-subscribe mb-3">
@@ -176,6 +177,9 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <div class="mt-3">
+                                        @include('front.layouts.partials.messages')
+                                    </div>
                                 </div><!--end col-->
                             </div><!--end row-->
                         </div>
