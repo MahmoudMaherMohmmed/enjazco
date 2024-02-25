@@ -141,7 +141,7 @@
                         <div class="content mt-4">
                             <h5 class="fw-bold">{{__('website.email')}}</h5>
                             <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
-                            <a href="{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a>
+                            <a href="{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a> <br>
                             <a href="{{$main_branch->email_2}}" class="read-more">{{$main_branch->email_2}}</a>
                         </div>
                     </div>
