@@ -37,7 +37,7 @@
 
     <!-- Start -->
     <section class="section">
-        <div class="container mt-60 mb-5">
+        <div class="container mt-60 mb-4">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="position-relative">
@@ -48,10 +48,86 @@
                 <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="section-title ms-lg-4">
                         <h6>{{__('website.about_us')}}</h6>
-                        <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span> {{__('website.logistics')}}</h4>
+                        <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span></h4>
                         <p class="text-muted">{!! $settings->description !!}</p>
                     </div>
                 </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container border-top mb-5" id="portfolio">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/1.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/1.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/2.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/2.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/3.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/3.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/4.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/4.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/5.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/5.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mt-4 pt-2">
+                    <div class="card border-0 work-container work-primary work-modern position-relative d-block overflow-hidden rounded h-100">
+                        <div class="portfolio-box-img position-relative overflow-hidden h-100">
+                            <img class="item-container img-fluid mx-auto h-100" src="{{URL::asset('front/assets')}}/images/about/6.jpeg" alt="about" />
+                            <div class="overlay-work"></div>
+                            <div class="icons text-center">
+                                <a href="{{URL::asset('front/assets')}}/images/about/6.jpeg" class="work-icon bg-white d-inline-flex rounded-pill lightbox"><i data-feather="camera" class="fea icon-sm image-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div><!--end row-->
         </div><!--end container-->
 

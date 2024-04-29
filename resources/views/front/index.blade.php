@@ -109,7 +109,7 @@
                 <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                     <div class="section-title ms-lg-4">
                         <h6>{{__('website.about_us')}}</h6>
-                        <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span> {{__('website.logistics')}}</h4>
+                        <h4 class="title mb-4">{{__('website.powerful_features_of')}} <br> <span class="text-primary">{{$settings->title}}</span></h4>
                         <p class="text-muted">{!! $settings->short_description !!}</p>
                         <a href="{{route('about')}}" class="btn btn-primary mt-3">{{__('website.read_more')}} <i class="uil uil-angle-right-b"></i></a>
                     </div>
