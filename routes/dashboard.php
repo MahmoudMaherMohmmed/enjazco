@@ -27,12 +27,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/home', [HomeController::class, 'home'])->name('home');
         Route::resource('users', UserController::class);
-        Route::resource('sliders', SliderController::class);
         Route::resource('services', ServiceController::class);
+        Route::resource('sliders', SliderController::class);
         Route::resource('blogs', BlogController::class);
         Route::resource('partners', PartnerController::class);
-        Route::resource('contacts', ContactController::class)->only(['index', 'show']);
         Route::resource('subscribes', SubscribeController::class)->only(['index']);
+        Route::resource('contacts', ContactController::class)->only(['index', 'show']);
         Route::resource('branches', BranchController::class);
         Route::resource('settings', SettingController::class);
     });
