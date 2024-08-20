@@ -39,8 +39,8 @@
                         <table class="table text-md-nowrap" id="example2">
                             <thead>
                                 <tr>
-                                    <th class="wd-10p border-bottom-0">{{ __('admins.attributes.id') }}</th>
-                                    <th class="wd-25p border-bottom-0">{{ __('admins.attributes.name') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.id') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('admins.attributes.name') }}</th>
                                     <th class="wd-20p border-bottom-0">{{ __('admins.attributes.phone') }}</th>
                                     <th class="wd-20p border-bottom-0">{{ __('admins.attributes.email') }}</th>
                                     <th class="wd-10p border-bottom-0">{{ __('admins.attributes.status') }}</th>

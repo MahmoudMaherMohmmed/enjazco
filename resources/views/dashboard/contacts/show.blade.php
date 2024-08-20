@@ -56,7 +56,7 @@
                                 @endif
                                 <tr>
                                     <th scope="row">{{ __('contacts.attributes.created_at') }}</th>
-                                    <td>{{$contact->created_at->diffForHumans()}}</td>
+                                    <td style="direction: ltr;">{{$contact->created_at}}</td>
                                 </tr>
                             </tbody>
                         </table>

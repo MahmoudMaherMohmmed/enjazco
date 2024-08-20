@@ -40,10 +40,9 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.title') }}</th>
+                                    <th class="wd-50p border-bottom-0">{{ __('blogs.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('blogs.actions.actions') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('blogs.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +53,6 @@
                                         <td>
                                             <span class="badge {{$blog->status->color()}}">{{$blog->status->trans()}}</span>
                                         </td>
-                                        <td>{{$blog->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.blogs.partials.actions.show')
                                             @include('dashboard.blogs.partials.actions.edit')

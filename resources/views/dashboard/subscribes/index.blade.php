@@ -36,13 +36,13 @@
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table text-md-nowrap" id="example2">
+                        <table class="table text-md-nowrap" id="example1">
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.email') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('subscribes.attributes.read_at') }}</th>
+                                    <th class="wd-35p border-bottom-0">{{ __('subscribes.attributes.email') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('subscribes.attributes.created_at') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('subscribes.attributes.read_at') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

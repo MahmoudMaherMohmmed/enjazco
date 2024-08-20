@@ -40,11 +40,10 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('partners.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.attributes.url') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.actions.actions') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('partners.attributes.title') }}</th>
+                                    <th class="wd-30p border-bottom-0">{{ __('partners.attributes.url') }}</th>
+                                    <th class="wd-10p border-bottom-0">{{ __('partners.attributes.status') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('partners.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,7 +55,6 @@
                                         <td>
                                             <span class="badge {{$partner->status->color()}}">{{$partner->status->trans()}}</span>
                                         </td>
-                                        <td>{{$partner->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.partners.partials.actions.show')
                                             @include('dashboard.partners.partials.actions.edit')

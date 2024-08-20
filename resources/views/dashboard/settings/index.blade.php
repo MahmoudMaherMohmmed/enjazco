@@ -38,18 +38,20 @@
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table text-md-nowrap" id="example2">
+                        <table class="table text-md-nowrap" id="example1">
                             <thead>
                                 <tr>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.actions.actions') }}</th>
+                                    <th class="wd-30p border-bottom-0">{{ __('settings.attributes.title') }}</th>
+                                    <th class="wd-30p border-bottom-0">{{ __('settings.attributes.short_description') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('settings.attributes.created_at') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('settings.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($settings as $setting)
                                     <tr>
                                         <td>{{$setting->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$setting->getTranslation('short_description', app()->getLocale())}}</td>
                                         <td>{{$setting->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.settings.partials.actions.show')

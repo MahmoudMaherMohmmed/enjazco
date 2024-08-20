@@ -40,10 +40,9 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.title') }}</th>
+                                    <th class="wd-50p border-bottom-0">{{ __('sliders.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('sliders.actions.actions') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('sliders.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +53,6 @@
                                         <td>
                                             <span class="badge {{$slider->status->color()}}">{{$slider->status->trans()}}</span>
                                         </td>
-                                        <td>{{$slider->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.sliders.partials.actions.show')
                                             @include('dashboard.sliders.partials.actions.edit')

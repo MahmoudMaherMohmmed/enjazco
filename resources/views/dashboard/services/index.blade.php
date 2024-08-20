@@ -40,10 +40,9 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('services.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('services.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('services.attributes.short_description') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('services.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('services.attributes.created_at') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('services.attributes.title') }}</th>
+                                    <th class="wd-35p border-bottom-0">{{ __('services.attributes.short_description') }}</th>
+                                    <th class="wd-10p border-bottom-0">{{ __('services.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('services.actions.actions') }}</th>
                                 </tr>
                             </thead>
@@ -56,7 +55,6 @@
                                         <td>
                                             <span class="badge {{$service->status->color()}}">{{$service->status->trans()}}</span>
                                         </td>
-                                        <td>{{$service->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.services.partials.actions.show')
                                             @include('dashboard.services.partials.actions.edit')

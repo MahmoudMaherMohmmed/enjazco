@@ -36,16 +36,14 @@
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table text-md-nowrap" id="example2">
+                        <table class="table text-md-nowrap" id="example1">
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.name') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.email') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.subject') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.read_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.actions.actions') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('contacts.attributes.name') }}</th>
+                                    <th class="wd-20 border-bottom-0">{{ __('contacts.attributes.email') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('contacts.attributes.subject') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('contacts.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,8 +58,6 @@
                                         <td>{{$contact->name}}</td>
                                         <td>{{$contact->email}}</td>
                                         <td>{{$contact->subject}}</td>
-                                        <td>{{$contact->created_at->diffForHumans()}}</td>
-                                        <td style="direction: ltr;">{{$contact->read_at}}</td>
                                         <td>
                                             @include('dashboard.contacts.partials.actions.show')
                                         </td>
