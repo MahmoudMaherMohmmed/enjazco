@@ -44,36 +44,42 @@
                                     <input class="form-control" name="name" placeholder="{{ __('admins.attributes.name') }}" value="{{$user!=null ? $user->name : old('name')}}" required="" type="text">
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.email') }} <span class="tx-danger">*</span></label>
                                     <input class="form-control" name="email" placeholder="{{ __('admins.attributes.email') }}" value="{{$user!=null ? $user->email : old('email')}}" required="" type="email">
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.phone') }} <span class="tx-danger">*</span></label>
                                     <input class="form-control" name="phone" placeholder="{{ __('admins.attributes.phone') }}" value="{{$user!=null ? $user->phone : old('phone')}}" required="" type="text">
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.password') }} @if($user==null)<span class="tx-danger">*</span>@endif</label>
                                     <input class="form-control" name="password" placeholder="{{ __('admins.attributes.password') }}" {{$user== null ? 'required' : ''}} type="password">
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.password_confirmation') }} @if($user==null)<span class="tx-danger">*</span>@endif</label>
                                     <input class="form-control" name="password_confirmation" placeholder="{{ __('admins.attributes.password_confirmation') }}" {{$user== null ? 'required' : ''}} type="password">
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.avatar') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$user!=null ? $user->getAvatar() : ''}}" data-height="200" />
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.status') }} <span class="tx-danger">*</span></label>
@@ -84,6 +90,7 @@
                                     </select>
                                 </div>
                             </div>
+
                             <div class="col-12"><button class="btn btn-main-primary pd-x-20 mg-t-10" type="submit">{{ $user!=null ? __('admins.actions.edit') : __('admins.actions.save') }}</button></div>
                         </div>
                     </form>

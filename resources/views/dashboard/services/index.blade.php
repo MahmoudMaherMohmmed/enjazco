@@ -50,8 +50,8 @@
                                 @foreach($services as $service)
                                     <tr>
                                         <td>{{$service->id}}</td>
-                                        <td>{{$service->getTranslation('title', app()->getLocale())}}</td>
-                                        <td>{{$service->getTranslation('short_description', app()->getLocale())}}</td>
+                                        <td>{{$service->title}}</td>
+                                        <td>{{$service->description}}</td>
                                         <td>
                                             <span class="badge {{$service->status->color()}}">{{$service->status->trans()}}</span>
                                         </td>

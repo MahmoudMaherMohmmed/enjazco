@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.branches.index') }}">{{ __('branches.plural') }}</a></span>
                 @if($branch!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$branch->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$branch->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $branch!=null ? __('branches.actions.edit') : __('branches.actions.create') }}</span>
             </div>
@@ -144,7 +144,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.status') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control select2-no-search" name="status" require="">
+                                    <select class="form-control select2-no-search" name="status" required="">
                                         @foreach(App\Enums\BranchStatusEnum::options() as $key=>$value)
                                             <option value="{{$key}}" {{$branch!=null && $branch->status->value==$key ? 'selected' : ''}}> {{ $value }} </option>
                                         @endforeach
