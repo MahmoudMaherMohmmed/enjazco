@@ -39,12 +39,11 @@
                         <table class="table text-md-nowrap" id="example2">
                             <thead>
                                 <tr>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.name') }}</th>
+                                    <th class="wd-10p border-bottom-0">{{ __('admins.attributes.id') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('admins.attributes.name') }}</th>
                                     <th class="wd-20p border-bottom-0">{{ __('admins.attributes.phone') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.email') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.attributes.created_at') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('admins.attributes.email') }}</th>
+                                    <th class="wd-10p border-bottom-0">{{ __('admins.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('admins.actions.actions') }}</th>
                                 </tr>
                             </thead>
@@ -58,7 +57,6 @@
                                         <td>
                                             <span class="badge {{$user->status->color()}}">{{$user->status->trans()}}</span>
                                         </td>
-                                        <td>{{$user->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.users.partials.actions.show')
                                             @include('dashboard.users.partials.actions.edit')

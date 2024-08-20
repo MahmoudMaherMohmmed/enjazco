@@ -74,18 +74,16 @@
                                     <input type="file" name="image" class="dropify" data-default-file="{{$user!=null ? $user->getAvatar() : ''}}" data-height="200" />
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.status') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control select2-no-search" name="status" require="">
+                                    <select class="form-control select2-no-search" name="status" required="">
                                         @foreach(App\Enums\UserStatusEnum::options() as $key=>$value)
                                             <option value="{{$key}}" {{$user!=null && $user->status->value==$key ? 'selected' : ''}}> {{ $value }} </option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-
                             <div class="col-12"><button class="btn btn-main-primary pd-x-20 mg-t-10" type="submit">{{ $user!=null ? __('admins.actions.edit') : __('admins.actions.save') }}</button></div>
                         </div>
                     </form>
