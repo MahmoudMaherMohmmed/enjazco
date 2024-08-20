@@ -51,7 +51,7 @@
                                 @foreach($settings as $setting)
                                     <tr>
                                         <td>{{$setting->title}}</td>
-                                        <td>{{$setting->short_description}}</td>
+                                        <td>{!! $setting->short_description !!}</td>
                                         <td>{{$setting->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.settings.partials.actions.show')
