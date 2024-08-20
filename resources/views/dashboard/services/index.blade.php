@@ -51,7 +51,7 @@
                                     <tr>
                                         <td>{{$service->id}}</td>
                                         <td>{{$service->title}}</td>
-                                        <td>{{$service->description}}</td>
+                                        <td>{{$service->short_description}}</td>
                                         <td>
                                             <span class="badge {{$service->status->color()}}">{{$service->status->trans()}}</span>
                                         </td>
