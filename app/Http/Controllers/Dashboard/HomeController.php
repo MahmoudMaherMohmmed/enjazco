@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Branch;
+use App\Models\Contact;
 use App\Models\Service;
+use App\Models\Subscribe;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -37,9 +39,10 @@ class HomeController extends Controller
     public function home()
     {
         $users = User::latest()->get();
-        $branches = Branch::latest()->get()->count();
         $services = Service::latest()->get()->count();
+        $contacts = Contact::unread()->count();
+        $subscribes = Subscribe::unread()->count();
 
-        return view('dashboard.index', compact('users', 'branches', 'services'));
+        return view('dashboard.index', compact('users', 'services', 'contacts', 'subscribes'));
     }
 }
