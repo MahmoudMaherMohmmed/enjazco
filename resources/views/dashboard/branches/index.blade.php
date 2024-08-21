@@ -42,11 +42,10 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('branches.attributes.id') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.address') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('branches.actions.actions') }}</th>
+                                    <th class="wd-25p border-bottom-0">{{ __('branches.attributes.title') }}</th>
+                                    <th class="wd-30p border-bottom-0">{{ __('branches.attributes.address') }}</th>
+                                    <th class="wd-10p border-bottom-0">{{ __('branches.attributes.status') }}</th>
+                                    <th class="wd-20p border-bottom-0">{{ __('branches.actions.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,7 +57,6 @@
                                         <td>
                                             <span class="badge {{$branch->status->color()}}">{{$branch->status->trans()}}</span>
                                         </td>
-                                        <td>{{$branch->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.branches.partials.actions.show')
                                             @include('dashboard.branches.partials.actions.edit')
