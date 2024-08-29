@@ -181,15 +181,15 @@
                                     <div class="row align-items-center">
                                         <div class="col-md-6 mt-4 pt-2">
                                             <div class="section-title text-md-start">
-                                                <h6 class="text-white-50">Team</h6>
-                                                <h4 class="title text-white title-dark mb-0">Meet Experience <br> Team Member</h4>
+                                                <h6 class="text-white-50">{{__('website.team')}}</h6>
+                                                <h4 class="title text-white title-dark mb-0">{{__('website.meet_experience')}}<br/>{{__('website.team_members')}}</h4>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 col-12 mt-4 pt-md-2">
                                             <div class="section-title text-md-start">
-                                                <p class="text-white-50 para-desc">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                                                <a href="javascript:void(0)" class="text-white title-dark">Read More <i data-feather="arrow-right" class="fea icon-sm"></i></a>
+                                                <p class="text-white-50 para-desc">{{__('website.team_subtitle')}}</p>
+                                                <a href="{{route('about')}}" class="text-white title-dark">{{__('website.read_more')}} <i data-feather="arrow-right" class="fea icon-sm"></i></a>
                                             </div>
                                         </div>
                                     </div>
