@@ -11,7 +11,7 @@
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
                         <h2 class="text-white title-dark"> {{__('website.blogs')}} </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.blogs_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

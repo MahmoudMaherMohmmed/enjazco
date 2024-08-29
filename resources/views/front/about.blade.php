@@ -11,7 +11,7 @@
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
                         <h2 class="text-white title-dark"> {{__('website.about_us')}} </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.about_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -140,7 +140,7 @@
                         <div class="title-heading">
                             <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" alt="">
                             <h4 class="heading title-dark text-white my-4">World’s Leading Contract <br> Logistics Provider</h4>
-                            <p class="text-white-50 para-dark para-desc mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                            <p class="text-white-50 para-dark para-desc mx-auto">{{__('website.about_subtitle')}}</p>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
@@ -154,7 +154,7 @@
                     <div class="section-title text-center mb-4 pb-2">
                         <h6 class="text-primary">Work Process</h6>
                         <h4 class="title mb-4">How do we works ?</h4>
-                        <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <p class="text-muted para-desc mx-auto mb-0">{{__('website.about_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

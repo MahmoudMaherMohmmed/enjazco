@@ -55,7 +55,7 @@
 
                                     <div class="card-body p-0 content">
                                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">{{__('website.phone')}}</a></h5>
-                                        <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                                        <p class="text-muted">{{__('website.slogan')}}</p>
                                         <p class="text-muted">{{$main_branch->phone_number_1}}{{$main_branch->phone_number_2 != null ? ' / ' . $main_branch->phone_number_2 : ''}}</p>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@
 
                                     <div class="card-body p-0 content">
                                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">{{__('website.email')}}</a></h5>
-                                        <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                                        <p class="text-muted">{{__('website.slogan')}}</p>
                                         <a href="mailto:{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a>
                                         <p></p>
                                     </div>
@@ -137,7 +137,7 @@
                 <div class="col-12 text-center">
                     <div class="section-title mb-4 pb-2">
                         <h4 class="title mb-4">{{__('website.services')}}</h4>
-                        <p class="text-muted para-desc mx-auto mb-0">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-muted para-desc mx-auto mb-0">{{__('website.services_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -217,7 +217,7 @@
 
                 <div class="col-lg-6">
                     <div class="section-title text-center text-lg-start">
-                        <p class="text-muted mb-0 mx-auto para-desc">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-muted mb-0 mx-auto para-desc">{{__('website.blogs_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

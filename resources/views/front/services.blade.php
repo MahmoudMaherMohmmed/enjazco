@@ -11,7 +11,7 @@
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
                         <h2 class="text-white title-dark"> {{__('website.services')}} </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.services_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -44,7 +44,7 @@
                     <div class="section-title text-center text-md-start">
                         <h6 class="text-primary">{{__('website.services')}}</h6>
                         <h4 class="title mb-4">{{__('website.what_we_do')}}</h4>
-                        <p class="text-muted mb-0 para-desc">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-muted mb-0 para-desc">{{__('website.services_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

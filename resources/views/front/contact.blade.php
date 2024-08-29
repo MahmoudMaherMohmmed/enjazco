@@ -11,7 +11,7 @@
                 <div class="col-lg-12 text-center">
                     <div class="pages-heading title-heading">
                         <h2 class="text-white title-dark"> {{__('website.contact')}} </h2>
-                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                        <p class="text-white-50 para-desc mb-0 mx-auto">{{__('website.contact_subtitle')}}</p>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -125,7 +125,7 @@
                         </div>
                         <div class="content mt-4">
                             <h5 class="fw-bold">{{__('website.phone')}}</h5>
-                            <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                            <p class="text-muted">{{__('website.slogan')}}</p>
                             <a href="javascript:void(0)" class="read-more">{{$main_branch->telephone_number}}</a> <br>
                             <a href="javascript:void(0)" class="read-more">{{$main_branch->phone_number_1}}</a> <br>
                             <a href="javascript:void(0)" class="read-more">{{$main_branch->phone_number_2}}</a>
@@ -140,7 +140,7 @@
                         </div>
                         <div class="content mt-4">
                             <h5 class="fw-bold">{{__('website.email')}}</h5>
-                            <p class="text-muted">{{__('website.start_working_with_enjazco_that_can_provide_everything')}}</p>
+                            <p class="text-muted">{{__('website.slogan')}}</p>
                             <a href="{{$main_branch->email_1}}" class="read-more">{{$main_branch->email_1}}</a> <br>
                             <a href="{{$main_branch->email_2}}" class="read-more">{{$main_branch->email_2}}</a>
                         </div>
