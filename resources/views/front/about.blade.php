@@ -139,7 +139,7 @@
                     <div class="col-12 text-center">
                         <div class="title-heading">
                             <img src="{{URL::asset('front/assets')}}/images/logo-light.png" height="67" alt="">
-                            <h4 class="heading title-dark text-white my-4">World’s Leading Contract <br> Logistics Provider</h4>
+                            <h4 class="heading title-dark text-white my-4">{{__('website.world’s_leading_logistics_provider')}}</h4>
                             <p class="text-white-50 para-dark para-desc mx-auto">{{__('website.about_subtitle')}}</p>
                         </div>
                     </div><!--end col-->
@@ -152,8 +152,8 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="section-title text-center mb-4 pb-2">
-                        <h6 class="text-primary">Work Process</h6>
-                        <h4 class="title mb-4">How do we works ?</h4>
+                        <h6 class="text-primary">{{__('website.work_process')}}</h6>
+                        <h4 class="title mb-4">{{__('website.how_do_we_works')}}</h4>
                         <p class="text-muted para-desc mx-auto mb-0">{{__('website.about_subtitle')}}</p>
                     </div>
                 </div><!--end col-->

@@ -33,6 +33,9 @@ return [
     'news_blog' => 'News & Blog',
     'powerful_features_of' => 'Powerful Features of',
     'logistics' => 'Logistics',
+    'world’s_leading_logistics_provider' => 'World’s Leading Logistics Provider',
+    'work_process' => 'Work Process',
+    'how_do_we_works' => 'How do we works ?',
     //Contact
     'phone' => 'Phone',
     'email' => 'Email',

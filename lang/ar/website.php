@@ -33,6 +33,9 @@ return [
     'news_blog' => 'المقالات والأخبار',
     'powerful_features_of' => 'الميزات القوية ل',
     'logistics' => 'للخدمات اللوجستية',
+    'world’s_leading_logistics_provider' => 'المزود الرائد للخدمات اللوجستية في العالم',
+    'work_process' => 'طريقة عملنا',
+    'how_do_we_works' => 'كيف نعمل ؟',
     //Contact
     'phone' => 'رقم الهاتف',
     'email' => 'البريد الالكتروني',
